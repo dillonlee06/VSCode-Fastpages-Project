@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "My Title",
+            "title": "My First Notebook",
             "content": "print (&quot;Hello World!&quot;) . Hello World! .",
             "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/fastpages/jupyter/2022/08/22/Python-Notebook.html",
             "relUrl": "/fastpages/jupyter/2022/08/22/Python-Notebook.html",
