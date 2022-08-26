@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Hello Python",
-            "content": "print(&quot;Hello World!&quot;) . Hello World! . msg = input(&quot;Enter a greeting: &quot;) print(msg) . print(&quot;enter something&quot;) s = input() print(&quot;You wrote:&quot;,s) . enter something You wrote: .",
+            "content": "print(&quot;Hello World!&quot;) . Hello World! . msg = input(&quot;Enter a greeting: &quot;) print(msg) . yo . print(&quot;Enter Something&quot;) s = input() print(&quot;You wrote:&quot;,s) . enter something You wrote: yo .",
             "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/fastpages/jupyter/2022/08/26/Hello-Python.html",
             "relUrl": "/fastpages/jupyter/2022/08/26/Hello-Python.html",
             "date": " • Aug 26, 2022"
