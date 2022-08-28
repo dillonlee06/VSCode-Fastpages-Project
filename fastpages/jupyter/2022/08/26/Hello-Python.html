@@ -298,7 +298,7 @@ Answer: CSP!
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello, '</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" running "</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"You will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" questions."</span><span class="p">)</span>
-<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">"Are you ready to take a test?"</span><span class="p">)</span>
+<span class="n">question_with_response</span><span class="p">(</span><span class="s2">"Are you ready to take a test?"</span><span class="p">)</span>
 
 <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"What command is used to include other functions that were previously developed?"</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"import"</span><span class="p">:</span>
@@ -336,24 +336,15 @@ Answer: CSP!
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello, dillonlee running /opt/homebrew/opt/python@3.10/bin/python3.10
 You will be asked 3 questions.
+Question: Are you ready to take a test?
+Question: What command is used to include other functions that were previously developed?
+import is correct!
+Question: What command is used to evaluate correct or incorrect response in this example?
+i dont know is incorrect!
+Question: Each 'if' command contains an '_________' to determine a true or false condition?
+expression is correct!
+dillonlee you scored 2/3
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/dillonlee/Downloads/VSCode-Fastpages-Project-2/_notebooks/2022-08-26-Hello Python.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 13&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/dillonlee/Downloads/VSCode-Fastpages-Project-2/_notebooks/2022-08-26-Hello%20Python.ipynb#W5sZmlsZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> print('Hello, ' + getpass.getuser() + " running " + sys.executable)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/dillonlee/Downloads/VSCode-Fastpages-Project-2/_notebooks/2022-08-26-Hello%20Python.ipynb#W5sZmlsZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> print("You will be asked " + str(questions) + " questions.")
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/dillonlee/Downloads/VSCode-Fastpages-Project-2/_notebooks/2022-08-26-Hello%20Python.ipynb#W5sZmlsZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> question_and_answer("Are you ready to take a test?")
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/dillonlee/Downloads/VSCode-Fastpages-Project-2/_notebooks/2022-08-26-Hello%20Python.ipynb#W5sZmlsZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span> rsp = question_with_response("What command is used to include other functions that were previously developed?")
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/dillonlee/Downloads/VSCode-Fastpages-Project-2/_notebooks/2022-08-26-Hello%20Python.ipynb#W5sZmlsZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span> if rsp == "import":
-
-<span class="ansi-red-fg">NameError</span>: name 'question_and_answer' is not defined</pre>
 </div>
 </div>
 
