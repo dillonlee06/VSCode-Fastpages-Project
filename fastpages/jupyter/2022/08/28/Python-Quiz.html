@@ -189,6 +189,17 @@ window.onload = wrap_img;
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect!"</span><span class="p">)</span>
 
+<span class="c1">#key vocabulary:</span>
+
+<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"'Hello, World' is a String literal. This is the referred to as _____, as it does not change?"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"static text"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect!"</span><span class="p">)</span>
+    
+
+
 <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" you scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span>
 </pre></div>
 
