@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Hello Python",
-            "content": "print(&quot;Hello World!&quot;) . Hello World! . msg = input(&quot;Enter a greeting: &quot;) print(msg) . yo . print(&quot;Enter Something&quot;) s = input() print(&quot;You wrote:&quot;,s) . enter something You wrote: yo .",
+            "content": "print(&quot;Hello World!&quot;) #simple hello world print command . Hello World! . msg = input(&quot;Enter a greeting: &quot;) print(msg) . yo . print(&quot;Enter Something&quot;) s = input() print(&quot;You wrote:&quot;,s) . enter something You wrote: yo . def question_and_answer(prompt): print(&quot;Question: &quot; + prompt) msg = input() print(&quot;Answer: &quot; + msg) question_and_answer(&quot;Name the Python output command mentioned in this lesson?&quot;) question_and_answer(&quot;If you see many lines of code in order, what would College Board call it?&quot;) question_and_answer(&quot;Describe a keyword used in Python to define a function?&quot;) . Question: Name the Python output command mentioned in this lesson? Answer: test Question: If you see many lines of code in order, what would College Board call it? Answer: est Question: Describe a keyword used in Python to define a function? Answer: tes .",
             "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/fastpages/jupyter/2022/08/26/Hello-Python.html",
             "relUrl": "/fastpages/jupyter/2022/08/26/Hello-Python.html",
             "date": " • Aug 26, 2022"
