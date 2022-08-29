@@ -83,6 +83,17 @@
 
   
       ,"page1": {
+          "title": "Vocab Page",
+          "content": "College Board Vocab . Sequence: two or more lines of code . Def: defines a variable when using input and output . Input: the data that goes into the code inputed by user . Output: the data that is recieved after the input . Procedural abstraction: Grouping a sequence of commands, often used repeatedly .",
+          "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/vocabulary/overview",
+          "relUrl": "/vocabulary/overview",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "Junior at Del Norte High School Dillon Lee 1. Github . . My APCSP blog page. &#8617; . |",
           "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/about/",
@@ -114,7 +125,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/robots.txt",
