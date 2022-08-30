@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: A little about myself.
-categories: [markdown]
+categories: [Blogs]
 title: My First Blog Post
 ---
 
