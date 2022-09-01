@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: A little about myself.
-categories: [CSP Assignments]
+categories: [CSP Assignments, Week 1]
 title: My First Blog Post
 ---
 
