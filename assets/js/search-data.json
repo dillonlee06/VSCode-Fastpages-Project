@@ -4,9 +4,9 @@
         "post0": {
             "title": "Lists Quiz",
             "content": "InfoDb = [] InfoDb.append({ &quot;FirstName&quot;: &quot;Dillon&quot;, &quot;LastName&quot;: &quot;Lee&quot;, &quot;DOB&quot;: &quot;January 21&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;Email&quot;: &quot;leedillon005@gmail.com&quot;, &quot;Hobbies&quot;: [&quot;Soccer&quot;, &quot;Videogames&quot;] }) print(InfoDb) . def print_data(d_rec): print(d_rec[&quot;FirstName&quot;], d_rec[&quot;LastName&quot;]) print(&quot; t&quot;, &quot;Residence:&quot;, d_rec[&quot;Residence&quot;]) print(&quot; t&quot;, &quot;Birth Day:&quot;, d_rec[&quot;DOB&quot;]) print(&quot; t&quot;, &quot;Email:&quot;, d_rec[&quot;Email&quot;]) print(&quot; t&quot;, &quot;Hobbies: &quot;, end=&quot;&quot;) print(&quot;, &quot;.join(d_rec[&quot;Hobbies&quot;])) print() # for loop algorithm iterates on length of InfoDb def for_loop(): print(&quot;For loop output n&quot;) for record in InfoDb: print_data(record) for_loop() . q1 = &quot;&quot;&quot;Which room is CSP in? a. A101 b. A111 c. A115 d. D114&quot;&quot;&quot; q2 = &quot;&quot;&quot;Which teacher is the best teacher? a. Mrs. Mansour b. Mrs. Roberts c. Mr. Yeung d. I hate all teachers&quot;&quot;&quot; q3 = &quot;&quot;&quot;255+1534? a. 1999 b. 1509 c. 1489 d. 1789&quot;&quot;&quot; questions = {q1 : &quot;a&quot;,q2 : &quot;c&quot;,q3 : &quot;d&quot;} name = input(&quot;Enter your name: &quot;) print(&quot;Hello&quot;,name, &quot;welcome to the quiz world&quot;) score=0 for i in questions: print(i) ans = input(&quot;enter the answer(a/b/c/d) : &quot;) if ans==questions[i]: print(&quot;correct answer, you got 1 point&quot;) score = score+1 else: print(&quot;wrong answer, you lost 1 point&quot;) score=score-1 print(&quot;Final score is:&quot;, score) . Hello Dillon welcome to the quiz world Which room is CSP in? a. A101 b. A111 c. A115 d. D114 correct answer, you got 1 point Which teacher is the best teacher? a. Mrs. Mansour b. Mrs. Roberts c. Mr. Yeung d. I hate all teachers correct answer, you got 1 point 255+1534? a. 1999 b. 1509 c. 1489 d. 1789 wrong answer, you lost 1 point Final score is: 1 .",
-            "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20assignments/week%203/2022/09/01/Lists-Quiz.html",
-            "relUrl": "/csp%20assignments/week%203/2022/09/01/Lists-Quiz.html",
-            "date": " • Sep 1, 2022"
+            "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20assignments/week%203/2022/09/02/Lists-Quiz.html",
+            "relUrl": "/csp%20assignments/week%203/2022/09/02/Lists-Quiz.html",
+            "date": " • Sep 2, 2022"
         }
         
     
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "Dark Mode",
             "content": "",
-            "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20assignments/week%203/2022/09/01/Dark-Mode.html",
-            "relUrl": "/csp%20assignments/week%203/2022/09/01/Dark-Mode.html",
-            "date": " • Sep 1, 2022"
+            "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20assignments/week%203/2022/09/02/Dark-Mode.html",
+            "relUrl": "/csp%20assignments/week%203/2022/09/02/Dark-Mode.html",
+            "date": " • Sep 2, 2022"
         }
         
     
@@ -26,9 +26,9 @@
         ,"post2": {
             "title": "CSP Python Intro Notes",
             "content": ".ipynb = python file . print(&quot;Hello World!&quot;) #simple hello world print command . Hello World! . msg = input(&quot;Enter a greeting: &quot;) #input and output command print(msg) . yo . print(&quot;Enter Something&quot;) #input and output command 2.0 s = input() print(&quot;You wrote:&quot;,s) . enter something You wrote: yo . def question_and_answer(prompt): #question and answer command print(&quot;Question: &quot; + prompt) msg = input() print(&quot;Answer: &quot; + msg) question_and_answer(&quot;Do you like food?&quot;) question_and_answer(&quot;Do you play a sport?&quot;) question_and_answer(&quot;What&#39;s your favorite class?&quot;) . Question: Do you like food? Answer: yes Question: Do you play a sport? Answer: yes, soccer Question: What&#39;s your favorite class? Answer: CSP! . import getpass, sys # def question_with_response(prompt): print(&quot;Question: &quot; + prompt) msg = input() return msg questions = 3 correct = 0 print(&#39;Hello, &#39; + getpass.getuser() + &quot; running &quot; + sys.executable) print(&quot;You will be asked &quot; + str(questions) + &quot; questions.&quot;) question_with_response(&quot;Are you ready to take a test?&quot;) rsp = question_with_response(&quot;What command is used to include other functions that were previously developed?&quot;) if rsp == &quot;import&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;What command is used to evaluate correct or incorrect response in this example?&quot;) if rsp == &quot;if&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) rsp = question_with_response(&quot;Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?&quot;) if rsp == &quot;expression&quot;: print(rsp + &quot; is correct!&quot;) correct += 1 else: print(rsp + &quot; is incorrect!&quot;) print(getpass.getuser() + &quot; you scored &quot; + str(correct) +&quot;/&quot; + str(questions)) . Hello, dillonlee running /opt/homebrew/opt/python@3.10/bin/python3.10 You will be asked 3 questions. Question: Are you ready to take a test? Question: What command is used to include other functions that were previously developed? import is correct! Question: What command is used to evaluate correct or incorrect response in this example? i dont know is incorrect! Question: Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition? expression is correct! dillonlee you scored 2/3 .",
-            "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/week%202/2022/09/01/CSP-Python-Intro-Notes.html",
-            "relUrl": "/csp%20notes/week%202/2022/09/01/CSP-Python-Intro-Notes.html",
-            "date": " • Sep 1, 2022"
+            "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/week%202/2022/09/02/CSP-Python-Intro-Notes.html",
+            "relUrl": "/csp%20notes/week%202/2022/09/02/CSP-Python-Intro-Notes.html",
+            "date": " • Sep 2, 2022"
         }
         
     
