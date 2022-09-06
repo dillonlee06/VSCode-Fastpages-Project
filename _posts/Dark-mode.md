@@ -1,0 +1,1 @@
+![](../images/dark%20mode%20screenshot.png)
