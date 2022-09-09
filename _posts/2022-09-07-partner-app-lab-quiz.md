@@ -10,11 +10,11 @@ title: App Lab Partner Quiz
 
 # **Planning**
 
-#Program Purpose and Function
-# Data Abstraction
-# Managing Complexity
-# Procedural Abstraction
-# Algorithm Implementation
+> Program Purpose and Function
+> Data Abstraction
+> Managing Complexity
+> Procedural Abstraction
+> Algorithm Implementation
 # Testing
 
 # Questions:
@@ -76,15 +76,15 @@ title: App Lab Partner Quiz
     <tr>
 </table>
 
-> -add an incorrect screen w/ button that resets your quiz
+> other additions needed
+- add an incorrect screen w/ button that resets your quiz
 - add a win screen w/ button for play again
 
 # **Reflection**
-
+>test
+- Design: 
 - Discoveries: Very long and tedious process where you have to just copy and paste the same code with just changing the variable.
-
 - Challenges: Figuring out how to start out, right answer -> next question, restart button.
-
 - Successes: After getting the hang of it, it was easy to understand the code needed to make the quiz work.
 
 
