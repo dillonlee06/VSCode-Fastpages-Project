@@ -6,7 +6,7 @@ categories: [CSP Assignments, Week 4]
 title: App Lab Partner Quiz
 ---
 
-Link to Quiz: 
+# **Link to Quiz**: [MLB Quiz](https://studio.code.org/projects/applab/J-lBx4h4v1k3OqyW71ciH1YEPZZQtRH2tGEAmyO9CI8/view)
 
 # **Planning**
 <table>
@@ -66,18 +66,17 @@ Link to Quiz:
         <td>test</td>
     <tr>
 </table>
-# **Discoveries**
-
-# **Challenges**
-
-# **Successes**
-
-Link to my own App: 
-
-# **Planning**
 
 # **Discoveries**
 
 # **Challenges**
 
 # **Successes**
+
+Program Purpose and Function
+Data Abstraction
+Managing Complexity
+Procedural Abstraction
+Algorithm Implementation
+Testing
+# **Link to my own App** : 
