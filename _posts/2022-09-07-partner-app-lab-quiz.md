@@ -10,14 +10,14 @@ title: App Lab Partner Quiz
 
 # **Planning**
 
-Program Purpose and Function
-Data Abstraction
-Managing Complexity
-Procedural Abstraction
-Algorithm Implementation
-Testing
+#Program Purpose and Function
+# Data Abstraction
+# Managing Complexity
+# Procedural Abstraction
+# Algorithm Implementation
+# Testing
 
-Questions:
+# Questions:
 <table>
     <tr>
         <th>Question::</th>
@@ -30,7 +30,7 @@ Questions:
         <td>Joe Musgrove</td>
     </tr>
     <tr>
-        <td>2. Which team is located in Seattle?<td>
+        <td>2. Which team is located in Seattle?</td>
         <td>Mariners</td>
         <td>White Sox</td>
     </tr>
@@ -75,16 +75,17 @@ Questions:
         <td>Yu Darvish</td>
     <tr>
 </table>
--add an incorrect screen w/ button that resets your quiz
--add a win screen w/ button for play again
+
+> -add an incorrect screen w/ button that resets your quiz
+- add a win screen w/ button for play again
 
 # **Reflection**
 
-Discoveries: Very long and tedious process where you have to just copy and paste the same code with just changing the variable.
+- Discoveries: Very long and tedious process where you have to just copy and paste the same code with just changing the variable.
 
-Challenges: Figuring out how to start out, right answer -> next question, restart button.
+- Challenges: Figuring out how to start out, right answer -> next question, restart button.
 
-Successes: After getting the hang of it, it was easy to understand the code needed to make the quiz work.
+- Successes: After getting the hang of it, it was easy to understand the code needed to make the quiz work.
 
 
 # **Link to my our own (non quiz) App**: [Learning 20th Century World History App](https://studio.code.org/projects/applab/wzrgWNAQJlODZaqGA30EkKgbkzkFHkBL3OxUF4DxlHo)
