@@ -9,6 +9,7 @@ title: App Lab Partner Quiz
 # **Link to Quiz**: [MLB Quiz](https://studio.code.org/projects/applab/J-lBx4h4v1k3OqyW71ciH1YEPZZQtRH2tGEAmyO9CI8/view)
 
 # **Planning**
+
 <table>
     <tr>
         <th>Question::</th>
@@ -67,11 +68,11 @@ title: App Lab Partner Quiz
     <tr>
 </table>
 
-# **Discoveries**
+# **Discoveries** : test
 
-# **Challenges**
+# **Challenges** : test
 
-# **Successes**
+# **Successes** : test
 
 Program Purpose and Function
 Data Abstraction
@@ -79,4 +80,4 @@ Managing Complexity
 Procedural Abstraction
 Algorithm Implementation
 Testing
-# **Link to my own App** : 
+# **Link to my our own (non quiz) App** : [World History App] (https://studio.code.org/projects/applab/wzrgWNAQJlODZaqGA30EkKgbkzkFHkBL3OxUF4DxlHo)
