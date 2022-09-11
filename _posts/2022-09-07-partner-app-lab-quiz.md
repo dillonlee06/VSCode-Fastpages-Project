@@ -9,31 +9,8 @@ title: App Lab Partner Quiz
 # **Link to Quiz**: [MLB Quiz](https://studio.code.org/projects/applab/J-lBx4h4v1k3OqyW71ciH1YEPZZQtRH2tGEAmyO9CI8/view)
 # **Link to my our own (non quiz) App**: [Learning 20th Century World History App](https://studio.code.org/projects/applab/wzrgWNAQJlODZaqGA30EkKgbkzkFHkBL3OxUF4DxlHo)
 # **Planning/Blogging findings**
-
-**Design**
-- Program Purpose and Function
-- Data Abstraction
-- Managing Complexity
-- Procedural Abstraction
-- Algorithm Implementation
-- Testing
-
-**Successes**
-- Program Purpose and Function
-- Data Abstraction
-- Managing Complexity
-- Procedural Abstraction
-- Algorithm Implementation
-- Testing
-
-**Discoveries**
-- Very long and tedious process where you have to just copy and paste the same code with just changing the variable.
-
-**Challenges**
-- Figuring out how to start the coding portion out. Right answer -> next question, restart button, etc.
+- need to add pictures to make the quiz more entertaining
 # Questions:
-
-
 <table>
     <tr>
         <th>Question::</th>
@@ -92,4 +69,26 @@ title: App Lab Partner Quiz
     <tr>
 </table>
 
+# **Planning/Blogging findings**
 
+**Design**
+- Program Purpose and Function : A quiz that will ask questions relating to MLB, must show right/wrong and restart using Javascript code
+- Data Abstraction: 
+- Managing Complexity: 
+- Procedural Abstraction: 
+- Algorithm Implementation: 
+- Testing: Will test the code/design by hitting the run button and then testing to see if the code works
+
+**Successes**
+- Program Purpose and Function: 
+- Data Abstraction: 
+- Managing Complexity: 
+- Procedural Abstraction: 
+- Algorithm Implementation: 
+- Testing: normally got the code to work on the second try, after seeing what was wrong with it the first time
+
+**Discoveries**
+- Very long and tedious process where you have to just copy and paste the same code with just changing the variable.
+
+**Challenges**
+- Figuring out how to start the coding portion out. Right answer -> next question, restart button, etc.
