@@ -7,16 +7,27 @@ title: App Lab Partner Quiz
 ---
 
 # **Link to Quiz**: [MLB Quiz](https://studio.code.org/projects/applab/J-lBx4h4v1k3OqyW71ciH1YEPZZQtRH2tGEAmyO9CI8/view)
+# **Link to my our own (non quiz) App**: [Learning 20th Century World History App](https://studio.code.org/projects/applab/wzrgWNAQJlODZaqGA30EkKgbkzkFHkBL3OxUF4DxlHo)
+# **Planning/Blogging findings**
 
-# **Planning**
-
-> Program Purpose and Function
-> Data Abstraction
-> Managing Complexity
-> Procedural Abstraction
-> Algorithm Implementation
-# Testing
-
+> **Design**
+- Program Purpose and Function
+- Data Abstraction
+- Managing Complexity
+- Procedural Abstraction
+- Algorithm Implementation
+- Testing
+> **Successes**
+- Program Purpose and Function
+- Data Abstraction
+- Managing Complexity
+- Procedural Abstraction
+- Algorithm Implementation
+- Testing
+> **Discoveries**
+- Very long and tedious process where you have to just copy and paste the same code with just changing the variable.
+> **Challenges**
+- Figuring out how to start the codeing portion out. Right answer -> next question, restart button, etc.
 # Questions:
 <table>
     <tr>
@@ -76,16 +87,6 @@ title: App Lab Partner Quiz
     <tr>
 </table>
 
-> other additions needed
-- add an incorrect screen w/ button that resets your quiz
-- add a win screen w/ button for play again
-
-# **Reflection**
->test
-- Design: 
-- Discoveries: Very long and tedious process where you have to just copy and paste the same code with just changing the variable.
-- Challenges: Figuring out how to start out, right answer -> next question, restart button.
-- Successes: After getting the hang of it, it was easy to understand the code needed to make the quiz work.
 
 
-# **Link to my our own (non quiz) App**: [Learning 20th Century World History App](https://studio.code.org/projects/applab/wzrgWNAQJlODZaqGA30EkKgbkzkFHkBL3OxUF4DxlHo)
+
