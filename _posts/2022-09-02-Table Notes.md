@@ -1,3 +1,10 @@
+---
+toc: true
+layout: post
+description: 2 ways to make a table
+categories: [CSP Notes, Week 3]
+title: Notes on how to make a table
+---
 # One way to make a table:
 
 
