@@ -5,6 +5,10 @@ description: Blog a note of gratitude to someone on campus and someone at home, 
 categories: [CSP Notes, Week 5]
 title: Psychology and the Good Life Notes
 ---
+- 40 % of students have an excessive amount of stress. 
+- 1/3 are so depressed it is difficult to function. 
+- 40% say that they feel hopeless in school. 
+- 60% of students have excessive amounts of anxiety.
 
 **Blog a note of gratitude to someone on campus and someone at home, record your experience in GH Pages.**
 - Someone on campus:
