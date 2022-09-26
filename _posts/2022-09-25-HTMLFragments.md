@@ -3,8 +3,21 @@ toc: true
 layout: post
 description: 
 categories: [CSP Assignments, Week 6]
-title: HTML Fragments
+title: JavaScript Fragments
 ---
+
+# Our Group
+
+<div id="JavaScriptTable">
+    <table>
+        <tr>
+            <td>Dillon</td>
+            <td>Rohan</td>
+            <td>Derek</td>
+            <td>Saavan</td>
+        </tr>
+    </table>
+</div>
 
 <div id="JavaScriptTable">
 </div>
