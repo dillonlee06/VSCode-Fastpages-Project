@@ -11,10 +11,10 @@ title: JavaScript Fragments
 <div id="JavaScriptTable">
     <table>
         <tr>
-            <td>Dillon</td>
-            <td>Rohan</td>
-            <td>Derek</td>
-            <td>Saavan</td>
+            <td>Dillon: Scrum Master</td>
+            <td>Rohan: Backend Dev</td>
+            <td>Derek: Frontend Dev</td>
+            <td>Saavan: DevOps</td>
         </tr>
     </table>
 </div>
