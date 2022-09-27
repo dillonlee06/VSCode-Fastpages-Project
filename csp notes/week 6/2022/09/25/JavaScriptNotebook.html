@@ -209,6 +209,49 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mf">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">age</span> <span class="o">=</span> <span class="s2">"16"</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span>
 </pre></div>
@@ -355,29 +398,28 @@ object ; [ 1, 2, 3 ]
     <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">=</span> <span class="nx">ghID</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">=</span> <span class="nx">classOf</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
-<span class="p">}</span>
+ <span class="p">}</span>
+  
 
-
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setRole</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">role</span><span class="p">)</span> <span class="p">{</span>
+ <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setRole</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">role</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="nx">role</span><span class="p">;</span>
-<span class="p">}</span>
-
-
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toJSON</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+ <span class="p">}</span>
+  
+ <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toJSON</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
     <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
     <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
-<span class="p">}</span>
+ <span class="p">}</span>
+  
+ 
+ <span class="kd">var</span> <span class="nx">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Mr M"</span><span class="p">,</span> <span class="s2">"jm1021"</span><span class="p">,</span> <span class="mf">1977</span><span class="p">);</span>  
+ <span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">);</span>  
+ <span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>  
+  
 
-
-<span class="kd">var</span> <span class="nx">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Mr M"</span><span class="p">,</span> <span class="s2">"jm1021"</span><span class="p">,</span> <span class="mf">1977</span><span class="p">);</span>  
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">);</span>  
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>  
-
-
-<span class="nx">teacher</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Teacher"</span><span class="p">);</span>   
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">);</span> 
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>
+ <span class="nx">teacher</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Teacher"</span><span class="p">);</span>  
+ <span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">);</span>
+ <span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>
 </pre></div>
 
     </div>
@@ -613,49 +655,6 @@ object ; { name: 'Mr M', ghID: 'jm1021', classOf: 1977, role: 'Teacher' }
 &lt;/div&gt;
 
 &lt;/div&gt;
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mf">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
     
 
 &lt;/div&gt;
