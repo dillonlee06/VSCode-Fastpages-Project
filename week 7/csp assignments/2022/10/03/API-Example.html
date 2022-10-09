@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      38 min read
+      41 min read
     
 </span></p>
 
@@ -128,6 +128,7 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h3"><a href="#Python,-RapidAPI-Terms">Python, RapidAPI Terms </a></li>
+<li class="toc-entry toc-h3"><a href="#Covid19-RapidAPI-Example">Covid19 RapidAPI Example </a></li>
 <li class="toc-entry toc-h3"><a href="#Covid19-RapidAPI-Example">Covid19 RapidAPI Example </a></li>
 <li class="toc-entry toc-h3"><a href="#Digital-Coin-Example">Digital Coin Example </a></li>
 <li class="toc-entry toc-h3"><a href="#Formatting-Digital-Coin-example">Formatting Digital Coin example </a></li>
@@ -245,6 +246,64 @@ total_cases_per_1m_population 247,080
 deaths_per_1m_population 3,044
 total_tests 1,000,275,726
 tests_per_1m_population 2,990,303
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Covid19-RapidAPI-Example">
+<a class="anchor" href="#Covid19-RapidAPI-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Covid19 RapidAPI Example</strong><a class="anchor-link" href="#Covid19-RapidAPI-Example"> </a>
+</h3>
+<p><a href="https://rapidapi.com/spamakashrajtech/api/corona-virus-world-and-india-data/">Corona virus World and India data</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">Requests is a HTTP library for the Python programming language. </span>
+<span class="sd">The goal of the project is to make HTTP requests simpler and more human-friendly. </span>
+<span class="sd">"""</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://football98.p.rapidapi.com/premierleague/table"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"561be3d3dcmsh26da5c03e252f9fp1d2d4fjsn25f9e92f38d8"</span><span class="p">,</span>
+	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"football98.p.rapidapi.com"</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{'Position': '1', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F2.png', 'Name': ' Arsenal ', 'Points': '24', 'Played': '9', 'Winned': '8', 'Loosed': '1', 'Tie': '0', 'Goal Difference': '13'}, {'Position': '2', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F209.png', 'Name': ' Manchester City ', 'Points': '23', 'Played': '9', 'Winned': '7', 'Loosed': '0', 'Tie': '2', 'Goal Difference': '24'}, {'Position': '3', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F202.png', 'Name': ' Tottenham ', 'Points': '20', 'Played': '9', 'Winned': '6', 'Loosed': '1', 'Tie': '2', 'Goal Difference': '10'}, {'Position': '4', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F9.png', 'Name': ' Chelsea ', 'Points': '16', 'Played': '8', 'Winned': '5', 'Loosed': '2', 'Tie': '1', 'Goal Difference': '3'}, {'Position': '5', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F21.png', 'Name': ' Manchester United ', 'Points': '15', 'Played': '8', 'Winned': '5', 'Loosed': '3', 'Tie': '0', 'Goal Difference': '-2'}, {'Position': '6', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F207.png', 'Name': ' Newcastle United ', 'Points': '14', 'Played': '9', 'Winned': '3', 'Loosed': '1', 'Tie': '5', 'Goal Difference': '8'}, {'Position': '7', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F670.png', 'Name': ' Brighton ', 'Points': '14', 'Played': '8', 'Winned': '4', 'Loosed': '2', 'Tie': '2', 'Goal Difference': '5'}, {'Position': '8', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F622.png', 'Name': ' Bournemouth ', 'Points': '12', 'Played': '9', 'Winned': '3', 'Loosed': '3', 'Tie': '3', 'Goal Difference': '-12'}, {'Position': '9', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F211.png', 'Name': ' Fulham ', 'Points': '11', 'Played': '9', 'Winned': '3', 'Loosed': '4', 'Tie': '2', 'Goal Difference': '-4'}, {'Position': '10', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F18.png', 'Name': ' Liverpool ', 'Points': '10', 'Played': '8', 'Winned': '2', 'Loosed': '2', 'Tie': '4', 'Goal Difference': '8'}, {'Position': '11', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F671.png', 'Name': ' Brentford ', 'Points': '10', 'Played': '9', 'Winned': '2', 'Loosed': '3', 'Tie': '4', 'Goal Difference': '-1'}, {'Position': '12', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F197.png', 'Name': ' Everton ', 'Points': '10', 'Played': '9', 'Winned': '2', 'Loosed': '3', 'Tie': '4', 'Goal Difference': '-1'}, {'Position': '13', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F198.png', 'Name': ' West Ham ', 'Points': '10', 'Played': '9', 'Winned': '3', 'Loosed': '5', 'Tie': '1', 'Goal Difference': '-2'}, {'Position': '14', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F571.png', 'Name': ' Leeds ', 'Points': '9', 'Played': '8', 'Winned': '2', 'Loosed': '3', 'Tie': '3', 'Goal Difference': '-1'}, {'Position': '15', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F567.png', 'Name': ' Crystal Palace ', 'Points': '9', 'Played': '8', 'Winned': '2', 'Loosed': '3', 'Tie': '3', 'Goal Difference': '-2'}, {'Position': '16', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F199.png', 'Name': ' Aston Villa ', 'Points': '8', 'Played': '8', 'Winned': '2', 'Loosed': '4', 'Tie': '2', 'Goal Difference': '-4'}, {'Position': '17', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F615.png', 'Name': ' Southampton ', 'Points': '7', 'Played': '9', 'Winned': '2', 'Loosed': '6', 'Tie': '1', 'Goal Difference': '-9'}, {'Position': '18', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F203.png', 'Name': ' Wolves ', 'Points': '6', 'Played': '9', 'Winned': '1', 'Loosed': '5', 'Tie': '3', 'Goal Difference': '-9'}, {'Position': '19', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F572.png', 'Name': ' Leicester ', 'Points': '4', 'Played': '9', 'Winned': '1', 'Loosed': '7', 'Tie': '1', 'Goal Difference': '-9'}, {'Position': '20', 'SquadLogo': 'https://image-service.onefootball.com/transform?w=21&amp;h=21&amp;dpr=2&amp;image=https%253A%252F%252Fimages.onefootball.com%252Ficons%252Fteams%252F164%252F577.png', 'Name': ' Nottingham Forest ', 'Points': '4', 'Played': '8', 'Winned': '1', 'Loosed': '6', 'Tie': '1', 'Goal Difference': '-15'}]
 </pre>
 </div>
 </div>
