@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      36 min read
+      39 min read
     
 </span></p>
 
@@ -284,9 +284,6 @@ tests_per_1m_population 2,990,303
 <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
 <span class="n">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>  
-
-<span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">json</span><span class="p">[</span><span class="s2">"id"</span><span class="p">][</span><span class="s2">"quote"</span><span class="p">][</span><span class="s2">"author"</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">post</span><span class="p">[</span><span class="s2">"title"</span><span class="p">]</span><span class="si">}</span><span class="s1"> by </span><span class="si">{</span><span class="n">post</span><span class="p">[</span><span class="s2">"author"</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">post</span><span class="p">[</span><span class="s2">"permalink"</span><span class="p">]</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -300,6 +297,73 @@ tests_per_1m_population 2,990,303
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[{"id":1,"quote":"People need to remember that I am the first black driver in F1, so I am obviously going to be different to past drivers.","author":"Lewis Hamilton"},{"id":2,"quote":"People always think they know better. In football, everybody thinks they can be head coach and do it better. It's the same in F1: they always know better, even if they have no experience of it.","author":"Max Verstappen"},{"id":3,"quote":"For me, it was not destiny to make it to where I am now - I thought for a long- time I would become a go-kart mechanic, or a job like this, not an F1 driver.","author":"Fernando Alonso"},{"id":4,"quote":"IF is a very long word in Formula One; in fact, IF is F1 spelled backwards.","author":"Murray Walker"},{"id":5,"quote":"It's easy to get into the competition of F1, and you are never going to win every race even though you want to. So when you're not winning, you want to win, so you're not that happy. But you have to look at the big perspective, and I am very fortunate to be one of 22 in the world to do this.","author":"Daniel Ricciardo"},{"id":6,"quote":"I'm a casual F1 racing fan. I'm probably more of a stock car, NASCAR guy.","author":"Robin Zander"},{"id":7,"quote":"Politics is something that is bigger than many people would think and you just need to learn how to deal with them and how to accept it and how to treat them. I think that from when you are 10 years old and you look at F1 and don't realise it's there and then it is.","author":"Carlos Sainz Jr"},{"id":8,"quote":"F1 needs Ferrari much more than Ferrari needs F1.","author":"Toto Wolff"},{"id":9,"quote":"I don't care what other people think as long as I am happy. The day I die or retire, I have blown all my chances because I don't have the chance any more to change my image as an F1 driver.","author":"Sebastian Vettel"},{"id":10,"quote":"In the end, I think in F1 it is very hard for a girl.","author":"Max Verstappen"}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">This cell is dependent on valid run of API above.</span>
+<span class="sd">- try and except code is making sure "json" was properly run above</span>
+<span class="sd">- inside second try is code that is used to process Coin API data</span>
+
+<span class="sd">Note.  Run this cell repeatedly to format data without re-activating API</span>
+<span class="sd">"""</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"JSON data is Python type: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">json</span><span class="p">)))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Extracting Coins JSON status, if the API worked</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'status'</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"API status: "</span> <span class="o">+</span> <span class="n">status</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        
+        <span class="c1"># Extracting Coins JSON data, data about the coins</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'data'</span><span class="p">)</span>
+        
+        <span class="c1"># Procedural abstraction of Print code for coins</span>
+        <span class="k">def</span> <span class="nf">print_coin</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">"symbol"</span><span class="p">],</span> <span class="n">c</span><span class="p">[</span><span class="s2">"price"</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Icon Url: "</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="s2">"iconUrl"</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Rank Url: "</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="s2">"coinrankingUrl"</span><span class="p">])</span>
+
+        <span class="c1"># Coins data was observed to be a list</span>
+        <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">'coins'</span><span class="p">]:</span>
+            <span class="n">print_coin</span><span class="p">(</span><span class="n">coin</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+            
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Did you insert a valid key in X-RapidAPI-Key of API cell above?"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"This cell is dependent on running API call in cell above!"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>JSON data is Python type: &lt;class 'list'&gt;
+Did you insert a valid key in X-RapidAPI-Key of API cell above?
+[{'id': 1, 'quote': 'People need to remember that I am the first black driver in F1, so I am obviously going to be different to past drivers.', 'author': 'Lewis Hamilton'}, {'id': 2, 'quote': "People always think they know better. In football, everybody thinks they can be head coach and do it better. It's the same in F1: they always know better, even if they have no experience of it.", 'author': 'Max Verstappen'}, {'id': 3, 'quote': 'For me, it was not destiny to make it to where I am now - I thought for a long- time I would become a go-kart mechanic, or a job like this, not an F1 driver.', 'author': 'Fernando Alonso'}, {'id': 4, 'quote': 'IF is a very long word in Formula One; in fact, IF is F1 spelled backwards.', 'author': 'Murray Walker'}, {'id': 5, 'quote': "It's easy to get into the competition of F1, and you are never going to win every race even though you want to. So when you're not winning, you want to win, so you're not that happy. But you have to look at the big perspective, and I am very fortunate to be one of 22 in the world to do this.", 'author': 'Daniel Ricciardo'}, {'id': 6, 'quote': "I'm a casual F1 racing fan. I'm probably more of a stock car, NASCAR guy.", 'author': 'Robin Zander'}, {'id': 7, 'quote': "Politics is something that is bigger than many people would think and you just need to learn how to deal with them and how to accept it and how to treat them. I think that from when you are 10 years old and you look at F1 and don't realise it's there and then it is.", 'author': 'Carlos Sainz Jr'}, {'id': 8, 'quote': 'F1 needs Ferrari much more than Ferrari needs F1.', 'author': 'Toto Wolff'}, {'id': 9, 'quote': "I don't care what other people think as long as I am happy. The day I die or retire, I have blown all my chances because I don't have the chance any more to change my image as an F1 driver.", 'author': 'Sebastian Vettel'}, {'id': 10, 'quote': 'In the end, I think in F1 it is very hard for a girl.', 'author': 'Max Verstappen'}]
 </pre>
 </div>
 </div>
