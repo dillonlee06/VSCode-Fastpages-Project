@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Unit 4.1 - The Internet Notes",
-            "content": "Unit 1.3 Notes on Program Design and Development . Daily Video 1 . Daily Video 2 . Quiz . 1/3 .",
+            "content": "Unit 1.3 Notes on Program Design and Development . Daily Video 1 . Will learn how computing devices work together in a network | A computing device is a physical artifact that can run a program. Ex: computer, tablet, servers, routers, smart sensors | A computing system is a group of computing devices and programs working together | A computer network is a type of computing system and is a group of computing devices that send/receive data | Path between computing devices on a network is a sequence of directly connected computing devices that begins at sender, ends at receiver | Routing is the process of finding that path | Bandwidth is the maximum amount of data that can be sent in a fixed amount of time on a computer network (bits per second) | . Daily Video 2 . Quiz . 1/3 .",
             "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/ap%20notes/week%209/2022/10/17/Unit-4.1-Notes.html",
             "relUrl": "/ap%20notes/week%209/2022/10/17/Unit-4.1-Notes.html",
             "date": " • Oct 17, 2022"
