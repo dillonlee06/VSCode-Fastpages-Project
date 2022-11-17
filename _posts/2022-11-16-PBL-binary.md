@@ -1,8 +1,9 @@
 ---
-title: Binary Math
-layout: default
+toc: true
+layout: post
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
-tags: [CSP Notes]
+categories: [CSP Notes]
+title: Binary Math
 ---
 
 <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
