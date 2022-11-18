@@ -100,10 +100,21 @@ window.onload = wrap_img;
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
+<style>
+    .box {
+        width: 880px;
+        height: 187px;
+        background-color: #ffffff;
+    }
+</style>
+
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">Binary Math with Conversions</span>
     </header>
+    <br>
+    <br>
+    <br>
     <div class="row justify-content-md-center">
         <div class="col-8">
             <table class="table">
@@ -114,6 +125,8 @@ window.onload = wrap_img;
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
                 <th>Minus</th>
+                <th>RGB</th>
+                <th>color</th>
             </tr>
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
@@ -122,8 +135,11 @@ window.onload = wrap_img;
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                <td id="RGBvalue">0</td>
+                <td id="colorfinal"></td>
             </tr>
             </table>
+            <div class="box" id="box"></div>
         </div>
         <div class="col-12">
             
@@ -172,6 +188,86 @@ window.onload = wrap_img;
                     <button type="button" id="butt7" onclick="javascript:toggleBit(7)">Turn on</button>
                 </td>
                 
+                <td>
+<img class="img-responsive py-3" id="bulb8" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt8" onclick="javascript:toggleBit(8)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb9" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt9" onclick="javascript:toggleBit(9)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb10" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt10" onclick="javascript:toggleBit(10)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb11" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt11" onclick="javascript:toggleBit(11)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb12" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt12" onclick="javascript:toggleBit(12)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb13" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt13" onclick="javascript:toggleBit(13)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb14" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt14" onclick="javascript:toggleBit(14)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb15" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt15" onclick="javascript:toggleBit(15)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb16" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt16" onclick="javascript:toggleBit(16)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb17" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt17" onclick="javascript:toggleBit(17)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb18" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt18" onclick="javascript:toggleBit(18)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb19" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt19" onclick="javascript:toggleBit(19)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb20" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt20" onclick="javascript:toggleBit(20)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb21" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt21" onclick="javascript:toggleBit(21)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb22" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt22" onclick="javascript:toggleBit(22)">Turn on</button>
+                </td>
+                
+                <td>
+<img class="img-responsive py-3" id="bulb23" src="/VSCode-Fastpages-Project/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt23" onclick="javascript:toggleBit(23)">Turn on</button>
+                </td>
+                
             </tr>
             <tr>
                 
@@ -192,14 +288,47 @@ window.onload = wrap_img;
                 
                 <td><input type="text" id="digit7" value="0" size="1" readonly></td>
                 
+                <td><input type="text" id="digit8" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit9" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit10" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit11" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit12" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit13" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit14" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit15" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit16" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit17" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit18" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit19" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit20" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit21" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit22" value="0" size="1" readonly></td>
+                
+                <td><input type="text" id="digit23" value="0" size="1" readonly></td>
+                
             </tr>
             </table>
         </div>
     </div>
+    
 </div>
 
 <script>
-    const BITS = 8;
+    const BITS = 24;
     const MAX = 2 ** BITS - 1;
     const MSG_ON = "Turn on";
     const IMAGE_ON = "/VSCode-Fastpages-Project/images/bulb_on.gif";
@@ -218,11 +347,14 @@ window.onload = wrap_img;
     function setConversions(binary) {
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
-        document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
+        document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(24);
         // Hexadecimal conversion
-        document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
+        document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16).padStart(2, '0');
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        // added
+        document.getElementById('RGBvalue').innerHTML = parseInt(binary, 2).toString();
+        document.getElementById('box').style.backgroundColor = setRGB();
     }
     //
     function decimal_2_base(decimal, base) {
@@ -288,6 +420,59 @@ window.onload = wrap_img;
             document.getElementById('butt' + i).innerHTML = MSG_ON;
         }
         }
+
+
+// added
+    }
+     function addr(n) {
+        let binary = getBits();
+        // convert to decimal and do math
+        let RGBvalue = parseInt(binary, 2);
+        if (n > 0) {  // PLUS
+        RGBvalue = MAX === RGBvakue ? 0 : RGBvalue += n; // OVERFLOW or PLUS
+        } else  {     // MINUS
+        RGBvalue = 0 === RGBvalue ? MAX : RGBvalue += n; // OVERFLOW or MINUS
+        }
+        // convert the result back to binary
+        binary = decimal_2_base(RGBvalue, 2);
+        // update conversions
+        setConversions(binary);
+        // update bits
+        for (let i = 0; i < binary.length; i++) {
+        let digit = binary.substr(i, 1);
+        document.getElementById('digit' + i).value = digit;
+        if (digit === "1") {
+            document.getElementById('bulb' + i).src = IMAGE_ON;
+            document.getElementById('butt' + i).innerHTML = MSG_OFF;
+        } else {
+            document.getElementById('bulb' + i).src = IMAGE_OFF;
+            document.getElementById('butt' + i).innerHTML = MSG_ON;
+        }
+        }
+    }
+
+    function decimal_2_baser(RGBvalue, base) {
+        let conversion = "";
+        // loop to convert to base
+        do {
+        let digit = RGBvalue % base;
+        conversion = "" + digit + conversion; // what does this do?
+        RGBvalue = ~~(RGBvalue / base);         // what does this do?
+        } while (RGBvalue > 0);                  // why while at the end? what is ~~?
+        // loop to pad with zeros
+        if (base === 2) {                        // only pad for binary conversions
+        for (let i = 0; conversion.length < BITS; i++) {
+            conversion = "0" + conversion;
+        }
+        }
+        return conversion;
+    }
+
+    function setRGB() {
+        let RGB = document.getElementById('hexadecimal').innerHTML;
+        let color_code = "#" + RGB;
+        console.log(color_code)
+        return color_code
     }
 </script>
 
