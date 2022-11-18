@@ -10,7 +10,7 @@ title: Binary Math
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
-{% assign BITS = 8 %}
+{% assign BITS = 24 %}
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
@@ -150,5 +150,13 @@ title: Binary Math
             document.getElementById('butt' + i).innerHTML = MSG_ON;
         }
         }
+    function setRGB() {
+        let R = document.getElementById('red').innerHTML;
+        let G = document.getElementById('green').innerHTML;
+        let B = document.getElementById('blue').innerHTML;
+        let color_code = "#" + R + G + B;
+        console.log(color_code)
+        return color_code
+    }
     }
 </script>
