@@ -281,10 +281,36 @@ Hint: use the MOD operator (a % b) to find the remainder when a is divided by b.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">convert</span><span class="p">():</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">num</span><span class="p">):</span> <span class="c1">#defines the variable and convert(x) function</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s2">""</span> <span class="c1">#"" = what will be printed </span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">):</span> <span class="c1"># creates the while loop which determines whether the number is even or odd and assign the binary 1 or 0s for the final print</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">num</span><span class="p">:</span> 
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="s2">"0"</span>
+            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="s2">"1"</span>
+            <span class="n">num</span> <span class="o">-=</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span>
+            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># print the result defined in line 2</span>
+<span class="n">convert</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span> <span class="c1"># conversion from line 1</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>01000010
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
