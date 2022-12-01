@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Unit 3.5, 3.6 and 3.7 Booleans Expressions, Conditionals, Nested Conditionals Notes",
-            "content": "Vocab . | Function | Symbol | | - | - | | greater than | &gt; | | less than | &lt; | | greater than or equal to | &gt;= | | less than or equal to | &lt;=&gt; | | equal to | == | | not equal to | != | . Key Terms . Boolean expression: TRUE or FALSE statement | Conditional: Handles conditions in your program | Nested conditional: if or if else statement inside a different if else statement. | Relational Operator: | .",
+            "content": "Vocab . Function Symbol . greater than | &gt; | . less than | &lt; | . greater than or equal to | &gt;= | . less than or equal to | &lt;= | . equal to | == | . not equal to | != | . Key Terms . Boolean expression: TRUE or FALSE statement | Conditional: Handles conditions in your program | Nested conditional: if or if else statement inside a different if else statement. | Relational Operator: | .",
             "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/ap%20notes/2022/12/01/Unit-3.5-3.6-3.7-Notes.html",
             "relUrl": "/ap%20notes/2022/12/01/Unit-3.5-3.6-3.7-Notes.html",
             "date": " • Dec 1, 2022"
