@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      7 min read
     
 </span></p>
 
@@ -132,6 +132,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Iteration-example/notes">Iteration example/notes </a></li>
 <li class="toc-entry toc-h2"><a href="#Homework-Assignment">Homework Assignment </a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#Failures">Failures </a></li>
 <li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
 </ul>
 </li>
@@ -222,6 +223,11 @@ window.onload = wrap_img;
 <p>Notes:- Iteration is repetition: it is a way to repeat a function over and over until a condition is met rather than copy pasting the function- Can use loops such as while loop or for loop or recursive loops</p>
 <ul>
 <li>Recursive loops utilize if/else functions</li>
+<li>append()  pop() insert() adds new things to a list or removes them.</li>
+<li>Lists are a collection of data values </li>
+<li>Index is the number assigned with the data values in the list: most start with 0</li>
+<li>Iteration = number of times a function repeats to complete the task</li>
+<li>Iteration and loops go together: makes code more organized and easy</li>
 </ul>
 </blockquote>
 
@@ -436,26 +442,105 @@ Scams
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="c1">#questions go here (remember to make them strings!)</span>
+    <span class="p">(</span><span class="s2">"Question 1: What is iteration?"</span><span class="p">,</span>
+    <span class="s2">"1. Repetition"</span><span class="p">,</span> 
+    <span class="s2">"2. A coding language"</span><span class="p">,</span> 
+    <span class="s2">"3. A type of loop"</span><span class="p">,</span> 
+    <span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Question 2: How loops were covered in the lesson?"</span><span class="p">,</span>
+    <span class="s2">"1. while loop, for loop, recursive loop"</span><span class="p">,</span> 
+    <span class="s2">"2. if loop, else loop, while loop"</span><span class="p">,</span> 
+    <span class="s2">"3. number loop, string loop, boolean loop"</span><span class="p">,</span> 
+    <span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Question 3: What is a list?"</span><span class="p">,</span>
+    <span class="s2">"1. A collection of data values"</span><span class="p">,</span> 
+    <span class="s2">"2. Numbered elements in rows on a sheet of paper"</span><span class="p">,</span> 
+    <span class="s2">"3. Multiple lines of code"</span><span class="p">,</span> 
+    <span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Question 4: What is an index?"</span><span class="p">,</span>
+    <span class="s2">"1. The assigned numbers with data values in a list"</span><span class="p">,</span> 
+    <span class="s2">"2. A type of file"</span><span class="p">,</span> 
+    <span class="s2">"3. A type of loop"</span><span class="p">,</span> 
+    <span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Question 5: What type of brackets make a list?"</span><span class="p">,</span>
+    <span class="s2">"1. []"</span><span class="p">,</span> 
+    <span class="s2">"2. ()"</span><span class="p">,</span> 
+    <span class="s2">"3. </span><span class="si">{}</span><span class="s2">"</span><span class="p">,</span> 
+    <span class="p">)</span>
 <span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">questionloop</span><span class="p">():</span>
-    <span class="k">pass</span>
-    <span class="c1">#make an iterative function to ask the questions</span>
-    <span class="c1">#this can be any loop you want as long as it works!</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 
-<span class="k">def</span> <span class="nf">answercheck</span><span class="p">():</span>
-    <span class="k">pass</span>
-    <span class="c1">#make a function to check if the answer was correct or not</span>
+<span class="k">def</span> <span class="nf">recursive_loop</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">questions</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">questions</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="nb">input</span><span class="p">(</span><span class="s2">"What is your answer"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"You said the answer was "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">msg</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"It is correct"</span><span class="p">)</span>
+            <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"It is incorrect"</span><span class="p">)</span>
+        <span class="n">recursive_loop</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span>
+<span class="n">recursive_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Your final score is: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/5"</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>('Question 1: What is iteration?', '1. Repetition', '2. A coding language', '3. A type of loop')
+You said the answer was 3
+It is incorrect
+('Question 2: How loops were covered in the lesson?', '1. while loop, for loop, recursive loop', '2. if loop, else loop, while loop', '3. number loop, string loop, boolean loop')
+You said the answer was 3
+It is incorrect
+('Question 3: What is a list?', '1. A collection of data values', '2. Numbered elements in rows on a sheet of paper', '3. Multiple lines of code')
+You said the answer was 3
+It is incorrect
+('Question 4: What is an index?', '1. The assigned numbers with data values in a list', '2. A type of file', '3. A type of loop')
+You said the answer was 3
+It is incorrect
+('Question 5: What type of brackets make a list?', '1. []', '2. ()', '3. {}')
+You said the answer was 3
+It is incorrect
+Your final score is: 0/5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Failures">
+<a class="anchor" href="#Failures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Failures<a class="anchor-link" href="#Failures"> </a>
+</h3>
+<ul>
+<li>I tried to reference the python quiz from last trimester to help me complete this HW but the quiz requirements are different for this one so it didn't work (3 multiple choice answer)</li>
+<li>I tried to create multiple lists for questions, correct answers, wrong answers but that didn't work</li>
+<li>Made input originally have to match the question answers but then i switched to just typing in the letter</li>
+<li>Ended up using the correct answer system from the Python Quiz from last trimester</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
