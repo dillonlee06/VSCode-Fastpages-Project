@@ -4,22 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Variables and Assignment in JavaScript | APCSP</title>
+<title>Unit 3.9-3.11 Developing Algorithms (JavaScript) | APCSP</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Variables and Assignment in JavaScript" />
+<meta property="og:title" content="Unit 3.9-3.11 Developing Algorithms (JavaScript)" />
 <meta name="author" content="Dillon Lee" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Dillon Lee Fastpages Project." />
 <meta property="og:description" content="Dillon Lee Fastpages Project." />
-<link rel="canonical" href="https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/2022/11/27/VariablesJavaScript.html" />
-<meta property="og:url" content="https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/2022/11/27/VariablesJavaScript.html" />
+<link rel="canonical" href="https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/2022/12/06/developing-algorithms-js.html" />
+<meta property="og:url" content="https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/2022/12/06/developing-algorithms-js.html" />
 <meta property="og:site_name" content="APCSP" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-27T00:00:00-06:00" />
+<meta property="article:published_time" content="2022-12-06T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Variables and Assignment in JavaScript" />
+<meta property="twitter:title" content="Unit 3.9-3.11 Developing Algorithms (JavaScript)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dillon Lee"},"dateModified":"2022-11-27T00:00:00-06:00","datePublished":"2022-11-27T00:00:00-06:00","description":"Dillon Lee Fastpages Project.","headline":"Variables and Assignment in JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/2022/11/27/VariablesJavaScript.html"},"url":"https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/2022/11/27/VariablesJavaScript.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dillon Lee"},"dateModified":"2022-12-06T00:00:00-06:00","datePublished":"2022-12-06T00:00:00-06:00","description":"Dillon Lee Fastpages Project.","headline":"Unit 3.9-3.11 Developing Algorithms (JavaScript)","mainEntityOfPage":{"@type":"WebPage","@id":"https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/2022/12/06/developing-algorithms-js.html"},"url":"https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20notes/2022/12/06/developing-algorithms-js.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/VSCode-Fastpages-Project/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dillonlee06.github.io/VSCode-Fastpages-Project/feed.xml" title="APCSP" /><link rel="shortcut icon" type="image/x-icon" href="/VSCode-Fastpages-Project/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -90,8 +90,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Variables and Assignment in JavaScript</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-27T00:00:00-06:00" itemprop="datePublished">
-        Nov 27, 2022
+    <h1 class="post-title p-name" itemprop="name headline">Unit 3.9-3.11 Developing Algorithms (JavaScript)</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-06T00:00:00-06:00" itemprop="datePublished">
+        Dec 6, 2022
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="p-author h-card" itemprop="name">Dillon Lee</span></span>
@@ -116,24 +116,24 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-justify-center">
           <div class="px-2">
 
-    <a href="https://github.com/dillonlee06/VSCode-Fastpages-Project/tree/master/_notebooks/2022-11-27-VariablesJavaScript.ipynb" role="button" target="_blank">
+    <a href="https://github.com/dillonlee06/VSCode-Fastpages-Project/tree/master/_notebooks/2022-12-06-developing-algorithms-js.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/VSCode-Fastpages-Project/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/dillonlee06/VSCode-Fastpages-Project/master?filepath=_notebooks%2F2022-11-27-VariablesJavaScript.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/dillonlee06/VSCode-Fastpages-Project/master?filepath=_notebooks%2F2022-12-06-developing-algorithms-js.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/VSCode-Fastpages-Project/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/dillonlee06/VSCode-Fastpages-Project/blob/master/_notebooks/2022-11-27-VariablesJavaScript.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/dillonlee06/VSCode-Fastpages-Project/blob/master/_notebooks/2022-12-06-developing-algorithms-js.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/VSCode-Fastpages-Project/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
           <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fdillonlee06%2FVSCode-Fastpages-Project%2Fblob%2Fmaster%2F_notebooks%2F2022-11-27-VariablesJavaScript.ipynb" target="_blank">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fdillonlee06%2FVSCode-Fastpages-Project%2Fblob%2Fmaster%2F_notebooks%2F2022-12-06-developing-algorithms-js.ipynb" target="_blank">
       <img class="notebook-badge-image" src="/VSCode-Fastpages-Project/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
   </a>
 </div>
@@ -143,15 +143,23 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Numbers">Numbers </a></li>
-<li class="toc-entry toc-h1"><a href="#Boolean">Boolean </a></li>
-<li class="toc-entry toc-h1"><a href="#String">String </a></li>
-<li class="toc-entry toc-h1"><a href="#List">List </a></li>
+<li class="toc-entry toc-h1"><a href="#Review">Review </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#if-else-statements">if-else statements </a></li>
+<li class="toc-entry toc-h2"><a href="#for-loops">for loops </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Conditionals-vs-Booleans">Conditionals vs Booleans </a></li>
+<li class="toc-entry toc-h1"><a href="#Challenge">Challenge </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Overview">Overview </a></li>
+</ul>
+</li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2022-11-27-VariablesJavaScript.ipynb
+# file to edit: _notebooks/2022-12-06-developing-algorithms-js.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -159,122 +167,45 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Numbers">
-<a class="anchor" href="#Numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Numbers</strong><a class="anchor-link" href="#Numbers"> </a>
+<h1 id="Review">
+<a class="anchor" href="#Review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Review<a class="anchor-link" href="#Review"> </a>
 </h1>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<h2 id="if-else-statements">
+<a class="anchor" href="#if-else-statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>if-else statements<a class="anchor-link" href="#if-else-statements"> </a>
+</h2>
+<p>Syntax:</p>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mf">2</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>
-</pre></div>
+<pre><code>if (condition) {
 
-    </div>
-</div>
-</div>
+} else if (condition 2) {
 
-<div class="output_wrapper">
-<div class="output">
+} else {
 
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3
+}</code></pre>
+<h2 id="for-loops">
+<a class="anchor" href="#for-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>for loops<a class="anchor-link" href="#for-loops"> </a>
+</h2>
+<pre>
+for (let i = <em>number</em>; i &lt; <em>number</em>; i++) {
+    // code
+}
 </pre>
 </div>
 </div>
-
 </div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">q</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">w</span> <span class="o">=</span> <span class="mf">6</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">q</span> <span class="o">+</span> <span class="nx">w</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>11
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Boolean">
-<a class="anchor" href="#Boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Boolean</strong><a class="anchor-link" href="#Boolean"> </a>
+<h1 id="Conditionals-vs-Booleans">
+<a class="anchor" href="#Conditionals-vs-Booleans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditionals vs Booleans<a class="anchor-link" href="#Conditionals-vs-Booleans"> </a>
 </h1>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nb">Boolean</span><span class="p">(</span><span class="nx">w</span> <span class="o">&gt;</span> <span class="nx">q</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>true</pre>
-</div>
-
-</div>
+<p>Conditionals and booleans can be equivalent.</p>
+<p>For example, let's say there are two booleans: <code>rainy</code> and <code>sunny</code>.</p>
+<p>Let's look at the following code:</p>
 
 </div>
 </div>
-
 </div>
-    
-
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -282,7 +213,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nb">Boolean</span><span class="p">(</span><span class="nx">w</span> <span class="o">&lt;</span> <span class="nx">q</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">sunny</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> 
+<span class="nx">rainy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 </pre></div>
 
     </div>
@@ -308,15 +240,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="String">
-<a class="anchor" href="#String" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>String</strong><a class="anchor-link" href="#String"> </a>
-</h1>
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -324,8 +247,15 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">let</span> <span class="nx">groupname</span> <span class="o">=</span> <span class="s2">"ZestyYeungs"</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">groupname</span><span class="p">);</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nx">sunny</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">umbrella</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> 
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">rainy</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">umbrella</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> 
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">umbrella</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">umbrella</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -338,7 +268,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>ZestyYeungs
+<pre>false
 </pre>
 </div>
 </div>
@@ -352,81 +282,93 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="List">
-<a class="anchor" href="#List" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>List</strong><a class="anchor-link" href="#List"> </a>
+<p>The code above is the same as below:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">umbrella</span> <span class="o">=</span> <span class="o">!</span><span class="nx">sunny</span> <span class="o">&amp;&amp;</span> <span class="nx">rainy</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">umbrella</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To determine if two conditionals and booleans are the same, you can substitute the four possibilities that the two booleans (sunny and rainy) can be (listed below) into the conditional and boolean and see if both cases match:</p>
+<p><code>sunny = true</code>, <code>rainy = true</code></p>
+<p><code>sunny = true</code>, <code>rainy = false</code></p>
+<p><code>sunny = false</code>, <code>rainy = true</code></p>
+<p><code>sunny = false</code>, <code>rainy = false</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Challenge">
+<a class="anchor" href="#Challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Challenge<a class="anchor-link" href="#Challenge"> </a>
 </h1>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<p>Using JavaScript, create an algorithm that takes in an IP address and a subnet mask and computes the network address.</p>
+<h2 id="Overview">
+<a class="anchor" href="#Overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview<a class="anchor-link" href="#Overview"> </a>
+</h2>
+<p>As we've seen in Unit 4.1, an IP address is a 32 bit number that uniquely identifies each device. (See <a href="https://apclassroom.collegeboard.org/103/home?apd=n5rz22pu2h&amp;unit=4">this</a> for a recap). Something extra is that an IP address also comes with a subnet mask. A subnet mask is also a 32 bit number that identifies what network an IP address in in through a process that uses the bitwise AND.</p>
+<p>In ANDing:</p>
+<p>0 + 0 = 0</p>
+<p>0 + 1 = 0</p>
+<p>1 + 0 = 0</p>
+<p>1 + 1 = 1</p>
+<p><br>
+The following are the steps to determine the network that an IP address is in given the subnet mask:</p>
+<p>Example: IP address: 192.168.0.1</p>
+<p>Subnet mask: 255.255.255.0</p>
+<ol>
+<li>Convert the IP address into binary: 192.168.0.1 -&gt; 11000000.10101000.00000000.00000001</li>
+<li>Convert the subnet mask into binary: 255.255.255.0 -&gt; 11111111.11111111.11111111.00000000</li>
+<li>Do a bitwise AND operation on the binary IP address and subnet mask: </li>
+</ol>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">groupnames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Dillon"</span><span class="p">,</span> <span class="s2">"Rohan"</span><span class="p">,</span> <span class="s2">"Adi"</span><span class="p">,</span> <span class="s2">"Tay"</span><span class="p">];</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">groupnames</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[ 'Dillon', 'Rohan', 'Adi', 'Tay' ]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">group</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">"Dillon"</span><span class="p">,</span> 
-    <span class="s2">"Rohan"</span><span class="p">,</span> 
-    <span class="s2">"Adi"</span><span class="p">,</span> 
-    <span class="s2">"Tay"</span>
-<span class="p">];</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">group</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[ 'Dillon', 'Rohan', 'Adi', 'Tay' ]
-</pre>
-</div>
-</div>
+<pre><code> 11000000.10101000.00000000.00000001
++11111111.11111111.11111111.00000000
+=11000000.10101000.00000000.00000000</code></pre>
+<ol>
+<li>Convert the result back to decimal: 11000000.10101000.00000000.00000000 -&gt; 192.168.0.0</li>
+</ol>
+<p>The network address is <code>192.168.0.0</code></p>
 
 </div>
 </div>
-
 </div>
-    
-
 </div>
 
 
@@ -439,7 +381,7 @@ window.onload = wrap_img;
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/VSCode-Fastpages-Project/csp%20notes/2022/11/27/VariablesJavaScript.html" hidden></a>
+</script><a class="u-url" href="/VSCode-Fastpages-Project/csp%20notes/2022/12/06/developing-algorithms-js.html" hidden></a>
 </article>
 
       </div>
