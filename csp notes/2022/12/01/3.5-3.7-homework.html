@@ -218,13 +218,10 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-<span class="c1"># if (num &amp; 1) = 1</span>
-    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">2</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span>
- 
-<span class="c1"># function to reverse the string</span>
-<span class="c1"># Driver Code</span>
+
 <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"choose your number"</span><span class="p">))</span> <span class="c1"># sets num to be the integer converted input of user</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"The number: "</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="s2">" converts to "</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span>
 <span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
@@ -241,57 +238,6 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The number:  12  converts to 01100</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-    <span class="n">strs</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="k">while</span> <span class="n">num</span><span class="p">:</span>
-        <span class="c1"># if (num &amp; 1) = 1</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="n">strs</span> <span class="o">+=</span> <span class="s2">"1"</span>
-        <span class="c1"># if (num &amp; 1) = 0</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">strs</span> <span class="o">+=</span> <span class="s2">"0"</span>
-        <span class="c1"># right shift by 1</span>
-        <span class="n">num</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">strs</span>
- 
-<span class="c1"># function to reverse the string</span>
-<span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">strs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">strs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
- 
-<span class="c1"># Driver Code</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mi">67</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Binary of num 67 is:"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
-<span class="n">reverse</span><span class="p">(</span><span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Binary of num 67 is: 1000011
-</pre>
 </div>
 </div>
 
