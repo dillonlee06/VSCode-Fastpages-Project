@@ -1277,9 +1277,10 @@ Execution time: 0.14400482177734375 ms
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Explaining code:
-The sqrt() function defined in this code uses a binary search algorithm to calculate the square root of a number N. It does this by first initializing two variables, low and high, to 0 and N, respectively. It then enters a loop that continues until low is greater than high.</p>
-<p>In each iteration of the loop, the mid variable is calculated as the average of low and high, rounded down to the nearest integer using integer division. The if statement in the loop then checks if the square of mid is less than or equal to N. If this is the case, low is set to mid + 1, and the loop continues. Otherwise, high is set to mid - 1, and the loop continues.</p>
-<p>When the loop ends, the function returns low - 1 as the square root of N. However, as mentioned earlier, this implementation of the sqrt() function has some issues and may not always return the correct result.</p>
+The sqrt() function defined in this code uses a binary search algorithm to calculate the square root of a number N. It does this by first initializing two variables, low and high, to 0 and N. 
+It then enters a loop that continues until low is greater than high.
+In each iteration of the loop, the mid variable is calculated as the average of low and high, rounded down to the nearest integer using integer division. The if statement in the loop then checks if the square of mid is less than or equal to N. If this is the case, low is set to mid + 1, and the loop continues. Otherwise, high is set to mid - 1, and the loop continues.
+When the loop ends, the function returns low - 1 as the square root of N.</p>
 
 </div>
 </div>
