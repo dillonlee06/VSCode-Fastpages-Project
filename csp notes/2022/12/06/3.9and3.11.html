@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      14 min read
     
 </span></p>
 
@@ -1250,9 +1250,20 @@ Execution time: 0.14400482177734375 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="c1"># Write your code here</span>
-    <span class="k">return</span> <span class="kc">None</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span> <span class="k">as</span> <span class="n">sq</span>
+
+<span class="k">def</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="n">N</span>
+
+    <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">mid</span> <span class="o">*</span> <span class="n">mid</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">:</span>
+            <span class="n">low</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">high</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">low</span> <span class="o">-</span> <span class="mi">1</span>
 </pre></div>
 
     </div>
@@ -1262,6 +1273,17 @@ Execution time: 0.14400482177734375 ms
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Explaining code:
+The sqrt() function defined in this code uses a binary search algorithm to calculate the square root of a number N. It does this by first initializing two variables, low and high, to 0 and N, respectively. It then enters a loop that continues until low is greater than high.</p>
+<p>In each iteration of the loop, the mid variable is calculated as the average of low and high, rounded down to the nearest integer using integer division. The if statement in the loop then checks if the square of mid is less than or equal to N. If this is the case, low is set to mid + 1, and the loop continues. Otherwise, high is set to mid - 1, and the loop continues.</p>
+<p>When the loop ends, the function returns low - 1 as the square root of N. However, as mentioned earlier, this implementation of the sqrt() function has some issues and may not always return the correct result.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1293,19 +1315,19 @@ Execution time: 0.14400482177734375 ms
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Check number 1 failed
-Check number 2 failed
-Check number 3 failed
-Check number 4 failed
-Check number 5 failed
-Check number 6 failed
-Check number 7 failed
-Check number 8 failed
-Check number 9 failed
-Check number 10 failed
-Check number 11 failed
-Check number 12 failed
-Check number 13 failed
+<pre>Check number 1 passed
+Check number 2 passed
+Check number 3 passed
+Check number 4 passed
+Check number 5 passed
+Check number 6 passed
+Check number 7 passed
+Check number 8 passed
+Check number 9 passed
+Check number 10 passed
+Check number 11 passed
+Check number 12 passed
+Check number 13 passed
 </pre>
 </div>
 </div>
