@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -176,13 +176,29 @@ window.onload = wrap_img;
 <a class="anchor" href="#What-are-procedures?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are procedures?<a class="anchor-link" href="#What-are-procedures?"> </a>
 </h1>
 <p><strong>Fill in the blanks please:</strong></p>
-<p>Procedure:</p>
-<p>Parameters:</p>
-<p>Arguments:</p>
-<p>Modularity:</p>
-<p>Procedural Abstraction:</p>
-<p>What are some other names for procedures?:</p>
-<p>Why are procedures effective?:</p>
+<ul>
+<li>
+<p>Procedure: A named group of programming instructions that may have parameters and return values</p>
+</li>
+<li>
+<p>Parameters: The input values of a procedure</p>
+</li>
+<li>
+<p>Arguments: Specify the values of the parameters when a procedure is called</p>
+</li>
+<li>
+<p>Modularity: Separating a program's functions into independent pieces or blocks, each containing all the parts needed to execute a single aspect of the functionality</p>
+</li>
+<li>
+<p>Procedural Abstraction: provides a name for a process that allows a procedure to be used only knowing WHAT it does, not HOW it does it</p>
+</li>
+<li>
+<p>What are some other names for procedures?: A procedure is also known as a function, you can name the function whatever you want</p>
+</li>
+<li>
+<p>Why are procedures effective?: We have the ability to alter the result without actually changing the calls to the program</p>
+</li>
+</ul>
 
 </div>
 </div>
@@ -204,12 +220,10 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">decimal</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">binary</span> <span class="o">=</span> <span class="nb">format</span><span class="p">(</span><span class="n">decimal</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">)</span> <span class="c1"># procedure that converts to binary </span>
 
-<span class="k">def</span> <span class="nf">convertToBinary</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-
-
-    <span class="p">(</span><span class="n">decimal</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">()</span>
+<span class="c1"># Print the result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -222,7 +236,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
+<pre>111
 </pre>
 </div>
 </div>
@@ -250,17 +264,55 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">Start</span> <span class="n">by</span> <span class="n">creating</span> <span class="n">a</span> <span class="n">procedure</span> <span class="n">called</span> <span class="n">findMax</span> <span class="ow">and</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">parameters</span> <span class="n">to</span> <span class="n">numberA</span> <span class="ow">and</span> <span class="n">numberB</span><span class="o">.</span>
-
+<span class="n">function</span> <span class="n">findMax</span><span class="p">(</span><span class="n">numberA</span><span class="p">,</span> <span class="n">numberB</span><span class="p">){</span>
 <span class="o">//</span> <span class="n">Within</span> <span class="n">the</span> <span class="n">procedure</span><span class="p">,</span> <span class="n">write</span> <span class="n">the</span> <span class="n">code</span> <span class="n">to</span> <span class="n">determine</span> <span class="n">which</span> <span class="n">of</span> <span class="n">the</span> <span class="n">two</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">numberA</span> <span class="ow">or</span> <span class="n">numberB</span><span class="p">,</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">larger</span> <span class="n">value</span><span class="o">.</span> <span class="n">Print</span> <span class="n">that</span> <span class="n">value</span><span class="o">.</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">numberA</span> <span class="o">&gt;</span> <span class="n">numberB</span><span class="p">){</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">numberA</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">numberB</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="n">findMax</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
 
 <span class="o">//</span> <span class="n">Repeat</span> <span class="n">the</span> <span class="n">process</span><span class="p">,</span> <span class="n">this</span> <span class="n">time</span> <span class="n">creating</span> <span class="n">a</span> <span class="n">procedure</span> <span class="n">called</span> <span class="n">findMin</span><span class="p">,</span> <span class="n">which</span> <span class="n">will</span> <span class="nb">print</span> <span class="n">the</span> <span class="n">parameter</span> <span class="k">with</span> <span class="n">a</span> <span class="n">smaller</span> <span class="n">value</span><span class="o">.</span>
-
+<span class="n">function</span> <span class="n">findMin</span><span class="p">(</span><span class="n">numberA</span><span class="p">,</span> <span class="n">numberB</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">numberA</span> <span class="o">&lt;</span> <span class="n">numberB</span><span class="p">){</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">numberA</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">numberB</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">findMin</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
 <span class="o">//</span> <span class="n">Call</span> <span class="n">both</span> <span class="n">functions</span> <span class="n">so</span> <span class="n">that</span> <span class="n">the</span> <span class="n">parameters</span> <span class="n">numberA</span> <span class="ow">and</span> <span class="n">numberB</span> <span class="n">are</span> <span class="n">given</span> <span class="n">a</span> <span class="n">value</span><span class="o">.</span>
-
+<span class="n">var</span> <span class="n">numberA</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">numberB</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">findMax</span><span class="p">(</span><span class="n">numberA</span><span class="p">,</span> <span class="n">numberB</span><span class="p">));</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">findMin</span><span class="p">(</span><span class="n">numberA</span><span class="p">,</span> <span class="n">numberB</span><span class="p">));</span>
 <span class="o">//</span> <span class="n">Optional</span> <span class="n">bonus</span><span class="o">-</span> <span class="n">create</span> <span class="n">a</span> <span class="n">procedure</span> <span class="n">that</span> <span class="n">can</span> <span class="n">determine</span> <span class="n">the</span> <span class="n">minimum</span> <span class="ow">or</span> <span class="n">maximum</span> <span class="n">value</span> <span class="n">out</span> <span class="n">of</span> <span class="n">more</span> <span class="n">than</span> <span class="n">two</span> <span class="n">parameters</span><span class="o">.</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>40
+20
+2
+undefined
+1
+undefined
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -292,14 +344,53 @@ window.onload = wrap_img;
 </div>
 </div>
 
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">charToBinary</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="c1"># Get the ASCII code of the characters in the string</span>
+  <span class="n">ascii_code</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  
+  <span class="c1"># Convert the ASCII code to binary (string of 0 and 1)</span>
+  <span class="n">binary</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">ascii_code</span><span class="p">)</span>
+  
+  <span class="c1"># Remove the "0b" from the binary string</span>
+  <span class="n">binary</span> <span class="o">=</span> <span class="n">binary</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+  
+  <span class="c1"># 8 digits</span>
+  <span class="n">binary</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+  
+  <span class="k">return</span> <span class="n">binary</span>
+
+<span class="c1"># Test the function</span>
+<span class="n">string</span> <span class="o">=</span> <span class="s2">"APCSP"</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+  <span class="n">binary</span> <span class="o">=</span> <span class="n">charToBinary</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">binary</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1">#formatting for the printed output</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>''APCSP'' in binary is 
-[1000001, 1010000, 1000011, 1010011, 1010000]
+<pre>A: 01000001
+P: 01010000
+C: 01000011
+S: 01010011
+P: 01010000
 </pre>
 </div>
 </div>
