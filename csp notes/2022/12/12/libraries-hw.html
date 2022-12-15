@@ -209,7 +209,7 @@ window.onload = wrap_img;
 
 <span class="n">num1</span> <span class="o">=</span> <span class="n">ndays</span><span class="p">(</span><span class="n">month</span><span class="p">,</span><span class="n">day</span><span class="p">)</span>
 <span class="n">num2</span> <span class="o">=</span> <span class="n">ndays</span><span class="p">(</span><span class="n">randommonth</span><span class="p">,</span><span class="n">randomday</span><span class="p">)</span>
-<span class="n">math</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">uabs</span> <span class="o">-</span> <span class="n">rabs</span><span class="p">)</span>
+<span class="n">math</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"The number of days between the given range of dates is: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">diff</span><span class="p">))</span>
 <span class="c1"># expected output shown below (or something similar)</span>
@@ -232,7 +232,7 @@ Input a day
 Input a year
 2022
 User day: 12/12/2022
-Random day: 2/28/2022
+Random day: 1/27/2022
 The number of days between the given range of dates is: 248
 </pre>
 </div>
@@ -248,9 +248,9 @@ The number of days between the given range of dates is: 248
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>code explained:
-The code imports the datetime and random modules, which are used to create date objects and generate random numbers, respectively.
-The code creates a dictionary that maps each month to the number of days in that month. This is used later to calculate the number of days between two dates.
-The code asks the user for a day, month, and year, and then uses the datetime.date() function to create a date object from these values.
+The code imports the datetime and random modules, which are used to create date objects and generate random numbers.
+The code then creates a dictionary that maps each month to the number of days in that month. This is used later to calculate the number of days between two dates.
+The code then asks the user for a day, month, and year, and then uses the datetime.date() function to create a date object from these values.
 The code generates a random day and month using the random.randint() function, and then creates a date object from these values and the user-specified year.
 The code defines a ndays() function that takes a month and day as arguments, and returns the number of days that have passed since the beginning of the year up to the given date.
 The code calls the ndays() function twice, once for the user-specified date and once for the random date, and assigns the result to the num1 and num2 variables.
