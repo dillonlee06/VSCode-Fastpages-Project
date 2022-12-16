@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -157,6 +157,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Notes">Notes </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#3.18-Undecidable-Problem-Example:">3.18 Undecidable Problem Example: </a></li>
 <li class="toc-entry toc-h1"><a href="#Homework!">Homework! </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Grading:">Grading: </a></li>
@@ -187,20 +188,20 @@ window.onload = wrap_img;
 <a class="anchor" href="#Vocabulary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocabulary<a class="anchor-link" href="#Vocabulary"> </a>
 </h2>
 <ul>
-<li>Problem:<ul>
-<li>Decision Problem:</li>
-<li>Organization Problem:</li>
+<li>Problem: Description of the task that is looking to be solved<ul>
+<li>Decision Problem: Yes or no answer problem</li>
+<li>Organization Problem: Problem where the answer would be the best one possible</li>
 </ul>
 </li>
-<li>Instance:</li>
-<li>Efficiency:<ul>
-<li>Polynomial Efficiency (Good):</li>
-<li>Exponential Efficiency (Bad):</li>
+<li>Instance: A problem with a specific input</li>
+<li>Efficiency: amount of computing needed to solve a problem<ul>
+<li>Polynomial Efficiency (Good): more work takes a proportional amount of time (1 job is +2 time)</li>
+<li>Exponential Efficiency (Bad): more work takes an exponential amount more time (1 job is 2x time)</li>
 </ul>
 </li>
-<li>Heuristic Approach:</li>
-<li>Decidable Problem:</li>
-<li>Undecidable Problem:</li>
+<li>Heuristic Approach: When optimal solutions are inefficient, look for a possibly optimal solution that is more efficient</li>
+<li>Decidable Problem: A decision problem that has a clear solution that will always make a correct output</li>
+<li>Undecidable Problem: A decision problem with no solution that is not gaurenteed to produce the correct output</li>
 </ul>
 
 </div>
@@ -213,7 +214,13 @@ window.onload = wrap_img;
 <a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes<a class="anchor-link" href="#Notes"> </a>
 </h2>
 <ul>
-<li>_</li>
+<li>Took some notes from college board</li>
+<li>An algorithm’s efficiency can be informally measured by determining the number of times a statement or group of statements executes.</li>
+<li>Different correct algorithms for the same problem can have different efficiencies. </li>
+<li>Algorithms with a polynomial efficiency or slower (constant, linear, square, cube, etc.) are said to run in a reasonable amount of time. Algorithms with exponential or factorial efficiencies are examples of algorithms that run in an unreasonable amount of time.</li>
+<li>Some problems cannot be solved in a reasonable amount of time because there is no efficient algorithm for solving them. In these cases, approximate solutions are sought. </li>
+<li>A decidable problem is a decision problem for which an algorithm can be written to produce a correct output for all inputs (e.g., “Is the number even?”).</li>
+<li>A heuristic is an approach to a problem that produces a solution that is not guaranteed to be optimal but may be used when techniques that are guaranteed to always find an optimal solution are impractical.</li>
 </ul>
 
 </div>
@@ -347,12 +354,69 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 <a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes<a class="anchor-link" href="#Notes"> </a>
 </h2>
 <ul>
-<li>_</li>
+<li>An undecidable problem may have some instances that have an algorithmic solution, but there is no algorithmic solution that could solve all instances of the problem.</li>
+<li>Some programs are so large or complex
+that they end up taking a long time to run,
+making them impractical to use. In order
+to minimize this runtime, the individual
+processes that comprise a program can be
+run on multiple processors simultaneously.
+Programmers need to evaluate the
+options of running these processes
+sequentially or in parallel across multiple
+processors to optimize the solution time</li>
+<li>The classic example of an undecidable problem is the halting problem, created by Alan Turing in 1936. The halting problem asks that if a computer is given a random program, can an algorithm ever be written that will answer the question, will this program ever stop running?</li>
 </ul>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.18-Undecidable-Problem-Example:">
+<a class="anchor" href="#3.18-Undecidable-Problem-Example:" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.18 Undecidable Problem Example:<a class="anchor-link" href="#3.18-Undecidable-Problem-Example:"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">divby3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">divby3</span><span class="p">(</span><span class="mi">21</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -371,30 +435,30 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">'DelNorte'</span><span class="p">:{</span>
-        <span class="s1">'Westview'</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># lot of typos in this dataset</span>
+    <span class="s1">'Del Norte'</span><span class="p">:{</span>
+        <span class="s1">'Westview'</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
         <span class="s1">'MtCarmel'</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
         <span class="s1">'Poway'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
-        <span class="s1">'RanchoBernrdo'</span><span class="p">:</span><span class="mi">50</span>
+        <span class="s1">'RanchoBernardo'</span><span class="p">:</span><span class="mi">50</span>
     <span class="p">},</span>
     <span class="s1">'Westview'</span><span class="p">:{</span>
         <span class="s1">'Del Norte'</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
         <span class="s1">'MtCarmel'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
         <span class="s1">'Poway'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span>
-        <span class="s1">'RanchoBernrdo'</span><span class="p">:</span> <span class="mi">45</span>
+        <span class="s1">'RanchoBernardo'</span><span class="p">:</span> <span class="mi">45</span>
     <span class="p">},</span>
     <span class="s1">'MtCarmel'</span><span class="p">:{</span>
         <span class="s1">'Westview'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
         <span class="s1">'Del Norte'</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
         <span class="s1">'Poway'</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span>
-        <span class="s1">'RanchoBernrdo'</span><span class="p">:</span><span class="mi">30</span>
+        <span class="s1">'RanchoBernardo'</span><span class="p">:</span><span class="mi">30</span>
     <span class="p">},</span>
     <span class="s1">'Poway'</span><span class="p">:{</span>
         <span class="s1">'Westview'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span>
         <span class="s1">'MtCarmel'</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span>
         <span class="s1">'Del Norte'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
-        <span class="s1">'RanchoBernrdo'</span><span class="p">:</span><span class="mi">15</span>
+        <span class="s1">'RanchoBernardo'</span><span class="p">:</span><span class="mi">15</span>
     <span class="p">},</span>
     <span class="s1">'RanchoBernardo'</span><span class="p">:{</span>
         <span class="s1">'Westview'</span><span class="p">:</span><span class="mi">45</span><span class="p">,</span>
@@ -403,33 +467,49 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
         <span class="s1">'Del Norte'</span><span class="p">:</span><span class="mi">50</span>
     <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">fastestroute</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">drivetime</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># sets the starting drive time to 0</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># initialize list to store order of locations visited</span>
+
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">order</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span> <span class="c1"># sets loop to continue until all locations have been visited</span>
+        <span class="n">mintime</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">'inf'</span><span class="p">)</span> <span class="c1"># sets minimum time to reach a location to infinity</span>
+        <span class="n">loc</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">location</span><span class="p">,</span> <span class="n">times</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">location</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">order</span><span class="p">:</span> <span class="c1"># if the location has not been visited yet</span>
+                <span class="k">if</span> <span class="n">times</span> <span class="o">&lt;</span> <span class="n">mintime</span><span class="p">:</span> <span class="c1"># if the time to reach the location is less than the current minimum time</span>
+                    <span class="n">mintime</span> <span class="o">=</span> <span class="n">times</span> <span class="c1"># update the minimum time</span>
+                    <span class="n">loc</span> <span class="o">=</span> <span class="n">location</span> <span class="c1"># update the location reached in minimum time</span>
+        <span class="n">drivetime</span> <span class="o">+=</span> <span class="n">mintime</span> <span class="c1"># add the minimum time to the total drive time</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">loc</span>
+        <span class="n">order</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+
+    <span class="n">order</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">drivetime</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="s1">'Del Norte'</span>
+<span class="n">drivetime</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="n">fastestroute</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Total drive time: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">drivetime</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" minutes"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Order of locations visited: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">order</span><span class="p">))</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Total drive time: 95 minutes
+Order of locations visited: ['Westview', 'Del Norte', 'MtCarmel', 'RanchoBernardo', 'Poway', 'Poway']
+</pre>
 </div>
-    
+</div>
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fastestroute</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">drivetime</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">order</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#CODE,CODE,CODE</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">drivetime</span><span class="p">,</span><span class="n">order</span><span class="p">)</span>
-
-<span class="n">start</span> <span class="o">=</span> <span class="s1">'DelNorte'</span>
-<span class="c1"># 'dataset' is the name of the nested key value pair</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
