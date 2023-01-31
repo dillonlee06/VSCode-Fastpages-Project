@@ -31,4 +31,4 @@ Explanation: A heuristic is something where you want the problem to be solved as
 
 # Q49:
 ![]({{site.baseurl}}/images/q49.png "49")
-Explanation: 
+Explanation: There will always be problems that will never be able to be determined by an algorithm. An example of this is determining when a program will stop.
