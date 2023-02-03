@@ -1,221 +1,179 @@
-## Lucid
-> Founded by Bernard Tse, Sam Weng, and Sheaupyng Lin, Lucid Motors, Inc. was created in 2007, originally "focused on building electric vehicle batteries and powertrains for other vehicle manufacturers". Eventually the company moved to all electric car manufacturing after many began to invest. 
-
-### 2024 Lucid Gravity
-> **Overview:** 
-- Duel electric motors
-- All wheel drive
-- Performance-oriented Grand Touring trim
-
-![]({{site.baseurl}}/images/gravity.png "test")
-
-| Model | Estimated Price | Horsepower |
-| - | - | - |
-| Pure | $90,000 | 1,000 |
-| Touring | $110,000 | ~1,100 |
-| Grand Touring | $140,000 | ~1,100 |
-| Grand Touring Performance | $170,000 | ~1,100 |
-| Sapphire | $250,000 | 1,200 |
-
-
-### Lucid Air
-> **Overview:**
-- Lucid's "main", most popular car with 
-- In 2018, the Lucid prototype gained media popularity by "smoking" other electric car models such as those made by Tesla
-- Many upgraded versions have been produced up until they started production on their new, unreleased 2024 Lucid Gravity 
-
-| Lucid Air Model | EPA Range | Horsepower | Price |
-| - | - | - | - |
-| Dream Edition Range (19″ wheels) | 520 mi. | 933 | $169,000 |
-| Dream Edition Range (21″ wheels) | 481 mi. | 933 | $169,000 |
-| Dream Edition Performance (19″ wheels) | 471 mi. | 1111 | $169,000 |
-| Dream Edition Performance (21″ wheels) | 451 mi. | 1111 | $169,000 |
-| Grand Touring (19″ wheels) | 516 mi. | 800 | $139,000 |
-| Grand Touring (21″ wheels) | 469 mi. | 800 | $139,000 |
-| Touring | 406 mi. | 620 | $95,000 |
-| Pure | 406 mi. | 480 | $77,400 |
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarRacer</title> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="carGame">
+        <div class="score"></div>
+        <div class="startScreen">
+            <p>Press here to start <br>
+               Use Arrow keys to move <br>
+               If you hit another car you will lose.  
+            </p>
+            <div>Select Level
+                <span class="level">
+                    <button id="easy">Easy</button>
+                    <button id="moderate">Moderate</button>
+                    <button id="difficult">Difficult</button>
+                </span>
+            </div>
+        </div>
+        <div class="gameArea"></div>
+    </div>
+    <script src="gameHandler.js"></script>
+</body>
+</html>
 
 <script>
-// make a car
-var lakshya = createSprite(120, 325);
-lakshya.setAnimation("car_green_1");
+const score = document.querySelector('.score');
+const startScreen = document.querySelector('.startScreen');
+const gameArea = document.querySelector('.gameArea');
+const level = document.querySelector('.level');
 
-var computercar = createSprite(285, 320);
-computercar.setAnimation("car_red_1");
+// loading audio files
 
-var colour1 = createSprite(0, 200,100,400);
-var colour2 = createSprite(400, 200,100,400);
+let gameStart = new Audio();
+let gameOver = new Audio();
 
-//set a colour in colour1 colour 2
-colour1.shapeColor = "green"
-colour2.shapeColor = "green"
-
-//now make a white in the road
-var white1 = createSprite(200, 50,20,40);
-var white2 = createSprite(200, 130,20,40);
-var white3 = createSprite(200, 230,20,40);
-var white4 = createSprite(200, 330,20,40);
-
-//now set colour
-white1.shapeColor = "white"
-white2.shapeColor = "white"
-white3.shapeColor = "white"
-white4.shapeColor = "white"
-
-//make a human to hold the finish line
-var human = createSprite(365, 10);
-var human1 = createSprite(35, 10);
-
-//set animation to human
-human.setAnimation("alienBlue_jump_1");
-human1.setAnimation("alienBlue_jump_1_copy_1");
-
-var finishline = createSprite(200, 23,275,7);
-finishline.shapeColor = "red"
+gameStart.src = "assets/audio/game_theme.mp3";
+gameOver.src = "assets/audio/gameOver_theme.mp3";
 
 
-var lin1 = createSprite(200, 1,257,7);
-lin1.shapeColor = "black"
+const levelSpeed = {easy: 7, moderate: 10, difficult: 14};
 
+let keys = {
+    ArrowUp: false,
+    ArrowDown: false,
+    ArrowLeft: false,
+    ArrowRight: false
+}
+let player = { speed: 7, score: 0 };
+level.addEventListener('click', (e)=> {
+    player.speed = levelSpeed[e.target.id];
+});
 
+startScreen.addEventListener('click', () => {
+    // gameArea.classList.remove('hide');
+    startScreen.classList.add('hide');
+    gameArea.innerHTML = "";
 
+    player.start = true;
+    gameStart.play();
+    gameStart.loop = true;
+    player.score = 0;
+    window.requestAnimationFrame(gamePlay);
 
-
-// gamestate 
-var gamestate = "serve"
-
-function draw() {
-  background("black")
-  
-  
-  if (keyDown("space")) {
-    playSound("sound://category_bell/vibrant_game_slot_machine_ding_2.mp3", false);
-    
-  }
-  
-  if (keyDown("r")) {
-  playSound("sound://category_bell/vibrant_game_star_burst_3.mp3", false);
-      
-  }
-  
-  
-  
-  //start the game and write text
-  if (gamestate==="serve") {
-    text("Press Space to Start", 0, 0);
-    fill("yellow");
-    textSize(25)
-    
-    text("Press Space to Start", 90, 170);
-    fill("yellow");
-    textSize(22)
-    
-    text("Lakshya",85,230)
-    fill("yellow")
-    textSize(22)
-    
-    text("Computer",240,230)
-  }
-  
-  createEdgeSprites();
-  lakshya.bounceOff(topEdge);
-  computercar.bounceOff(topEdge);
-  lakshya.bounceOff(lin1);
-  
-  velocityX = 0
-  velocityY = 1
-  
-  
-  
-  if (keyDown("space")) {
-  computercar.velocityX = 0
-  computercar.velocityY = -1
-  playSound("My-Video-(online-audio-converter.com).mp3", false);
-  
-  }
- 
- if (computercar.isTouching(finishline)) {
-   stopSound("My-Video-(online-audio-converter.com).mp3");
-   
- }
- 
-  
-  
-  
- if (keyDown("UP_ARROW")) {
-   lakshya.y = lakshya.y -2
-   playSound("My-Video564654654546654654-(online-audio-converter.com).mp3", false);
-   
-  }
-  
-  
-  
-  if (lakshya.isTouching(finishline)) {
-    stopSound("My-Video564654654546654654-(online-audio-converter.com).mp3");
-  }
-  
-  
-  
-   if (computercar.isTouching(finishline)) {
-  computercar.x = 285
-  computercar.y = 60
-  
- }
-  
-  if (keyDown("space") && gamestate === "serve") {
-    serve()
-    gamestate = "play";
-  }
-  
-  if (lakshya.isTouching(finishline)) {
-    text("1st Winner is Lakahya",0,0)
-    fill("yellow")
-    textSize(25)
-   
-   
-    
-     text("1st Winner is Lakahya",68,170)
-    fill("yellow")
-    textSize(25)
+    for(let i=0; i<5; i++){
+        let roadLineElement = document.createElement('div');
+        roadLineElement.setAttribute('class', 'roadLines');
+        roadLineElement.y = (i*150);
+        roadLineElement.style.top = roadLineElement.y + "px";
+        gameArea.appendChild(roadLineElement);
     }
-if (computercar.isTouching(topEdge)) {
-     text("2st Winner is Computer",0,0)
-    fill("yellow")
-    textSize(25)
-    
-     text("2st Winner is Computer",68,200)
-    fill("yellow")
-    textSize(25)
-  }
-    
-  if (lakshya.isTouching(topEdge) || computercar.isTouching(topEdge)) {
-  gamestate = "over"
- 
-  text("Press R to Restart",100,275,stroke("black"))
-  
-  }
-  
-  if (keyDown("r") && gamestate === "over") {
-  gamestate = "serve"
- lakshya.x = 120
- lakshya.y = 325
- computercar.x = 285
- computercar.y = 320
- 
-   computercar.velocityX = 0
-   computercar.velocityY = 0
-   
- 
- 
+
+    let carElement = document.createElement('div');
+    carElement.setAttribute('class', 'car');
+    gameArea.appendChild(carElement);
+
+    player.x = carElement.offsetLeft;
+    player.y = carElement.offsetTop  ;
+
+    for(let i=0; i<3; i++){
+        let enemyCar = document.createElement('div');
+        enemyCar.setAttribute('class', 'enemyCar');
+        enemyCar.y = ((i+1) * 350) * - 1;
+        enemyCar.style.top = enemyCar.y + "px";
+        enemyCar.style.backgroundColor = randomColor();
+        enemyCar.style.left = Math.floor(Math.random() * 350) + "px";
+        gameArea.appendChild(enemyCar);
+    }
+});
+
+function randomColor(){
+    function c(){
+        let hex = Math.floor(Math.random() * 256).toString(16);
+        return ("0"+ String(hex)).substr(-2);
+    }
+    return "#"+c()+c()+c();
 }
-  
-  function serve(){
-    
-  }
-  
-  
-  
-  drawSprites()
+
+function onCollision(a,b){
+    aRect = a.getBoundingClientRect();
+    bRect = b.getBoundingClientRect();
+
+    return !((aRect.top >  bRect.bottom) || (aRect.bottom <  bRect.top) ||
+        (aRect.right <  bRect.left) || (aRect.left >  bRect.right)); 
 }
+
+function onGameOver() {
+    player.start = false;
+    gameStart.pause();
+    gameOver.play();
+    startScreen.classList.remove('hide');
+    startScreen.innerHTML = "Game Over <br> Your final score is " + player.score + "<br> Press here to restart the game.";
+}
+
+function moveRoadLines(){
+    let roadLines = document.querySelectorAll('.roadLines');
+    roadLines.forEach((item)=> {
+        if(item.y >= 700){
+            item.y -= 750;
+        }
+        item.y += player.speed;
+        item.style.top = item.y + "px";
+    });
+}
+
+function moveEnemyCars(carElement){
+    let enemyCars = document.querySelectorAll('.enemyCar');
+    enemyCars.forEach((item)=> {
+
+        if(onCollision(carElement, item)){
+            onGameOver();
+        }
+        if(item.y >= 750){
+            item.y = -300;
+            item.style.left = Math.floor(Math.random() * 350) + "px";
+        }
+        item.y += player.speed;
+        item.style.top = item.y + "px";
+    });
+} 
+
+function gamePlay() {
+    let carElement = document.querySelector('.car');
+    let road = gameArea.getBoundingClientRect();
+
+    if(player.start){
+        moveRoadLines();
+        moveEnemyCars(carElement);
+            
+        if(keys.ArrowUp && player.y > (road.top + 70)) player.y -= player.speed;
+        if(keys.ArrowDown && player.y < (road.bottom - 85)) player.y += player.speed;
+        if(keys.ArrowLeft && player.x > 0) player.x -= player.speed;
+        if(keys.ArrowRight && player.x < (road.width - 70)) player.x += player.speed;
+
+        carElement.style.top = player.y + "px";
+        carElement.style.left = player.x + "px";
+
+        window.requestAnimationFrame(gamePlay);
+
+        player.score++;
+        const ps = player.score - 1;
+        score.innerHTML = 'Score: ' + ps;          
+    }
+}
+document.addEventListener('keydown', (e)=>{
+    e.preventDefault();
+    keys[e.key] = true;
+});
+
+document.addEventListener('keyup', (e)=>{
+    e.preventDefault();
+    keys[e.key] = false;
+});
 </script>
