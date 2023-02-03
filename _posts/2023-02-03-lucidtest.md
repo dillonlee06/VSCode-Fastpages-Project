@@ -1,0 +1,221 @@
+## Lucid
+> Founded by Bernard Tse, Sam Weng, and Sheaupyng Lin, Lucid Motors, Inc. was created in 2007, originally "focused on building electric vehicle batteries and powertrains for other vehicle manufacturers". Eventually the company moved to all electric car manufacturing after many began to invest. 
+
+### 2024 Lucid Gravity
+> **Overview:** 
+- Duel electric motors
+- All wheel drive
+- Performance-oriented Grand Touring trim
+
+![]({{site.baseurl}}/images/gravity.png "test")
+
+| Model | Estimated Price | Horsepower |
+| - | - | - |
+| Pure | $90,000 | 1,000 |
+| Touring | $110,000 | ~1,100 |
+| Grand Touring | $140,000 | ~1,100 |
+| Grand Touring Performance | $170,000 | ~1,100 |
+| Sapphire | $250,000 | 1,200 |
+
+
+### Lucid Air
+> **Overview:**
+- Lucid's "main", most popular car with 
+- In 2018, the Lucid prototype gained media popularity by "smoking" other electric car models such as those made by Tesla
+- Many upgraded versions have been produced up until they started production on their new, unreleased 2024 Lucid Gravity 
+
+| Lucid Air Model | EPA Range | Horsepower | Price |
+| - | - | - | - |
+| Dream Edition Range (19″ wheels) | 520 mi. | 933 | $169,000 |
+| Dream Edition Range (21″ wheels) | 481 mi. | 933 | $169,000 |
+| Dream Edition Performance (19″ wheels) | 471 mi. | 1111 | $169,000 |
+| Dream Edition Performance (21″ wheels) | 451 mi. | 1111 | $169,000 |
+| Grand Touring (19″ wheels) | 516 mi. | 800 | $139,000 |
+| Grand Touring (21″ wheels) | 469 mi. | 800 | $139,000 |
+| Touring | 406 mi. | 620 | $95,000 |
+| Pure | 406 mi. | 480 | $77,400 |
+
+
+<script>
+// make a car
+var lakshya = createSprite(120, 325);
+lakshya.setAnimation("car_green_1");
+
+var computercar = createSprite(285, 320);
+computercar.setAnimation("car_red_1");
+
+var colour1 = createSprite(0, 200,100,400);
+var colour2 = createSprite(400, 200,100,400);
+
+//set a colour in colour1 colour 2
+colour1.shapeColor = "green"
+colour2.shapeColor = "green"
+
+//now make a white in the road
+var white1 = createSprite(200, 50,20,40);
+var white2 = createSprite(200, 130,20,40);
+var white3 = createSprite(200, 230,20,40);
+var white4 = createSprite(200, 330,20,40);
+
+//now set colour
+white1.shapeColor = "white"
+white2.shapeColor = "white"
+white3.shapeColor = "white"
+white4.shapeColor = "white"
+
+//make a human to hold the finish line
+var human = createSprite(365, 10);
+var human1 = createSprite(35, 10);
+
+//set animation to human
+human.setAnimation("alienBlue_jump_1");
+human1.setAnimation("alienBlue_jump_1_copy_1");
+
+var finishline = createSprite(200, 23,275,7);
+finishline.shapeColor = "red"
+
+
+var lin1 = createSprite(200, 1,257,7);
+lin1.shapeColor = "black"
+
+
+
+
+
+// gamestate 
+var gamestate = "serve"
+
+function draw() {
+  background("black")
+  
+  
+  if (keyDown("space")) {
+    playSound("sound://category_bell/vibrant_game_slot_machine_ding_2.mp3", false);
+    
+  }
+  
+  if (keyDown("r")) {
+  playSound("sound://category_bell/vibrant_game_star_burst_3.mp3", false);
+      
+  }
+  
+  
+  
+  //start the game and write text
+  if (gamestate==="serve") {
+    text("Press Space to Start", 0, 0);
+    fill("yellow");
+    textSize(25)
+    
+    text("Press Space to Start", 90, 170);
+    fill("yellow");
+    textSize(22)
+    
+    text("Lakshya",85,230)
+    fill("yellow")
+    textSize(22)
+    
+    text("Computer",240,230)
+  }
+  
+  createEdgeSprites();
+  lakshya.bounceOff(topEdge);
+  computercar.bounceOff(topEdge);
+  lakshya.bounceOff(lin1);
+  
+  velocityX = 0
+  velocityY = 1
+  
+  
+  
+  if (keyDown("space")) {
+  computercar.velocityX = 0
+  computercar.velocityY = -1
+  playSound("My-Video-(online-audio-converter.com).mp3", false);
+  
+  }
+ 
+ if (computercar.isTouching(finishline)) {
+   stopSound("My-Video-(online-audio-converter.com).mp3");
+   
+ }
+ 
+  
+  
+  
+ if (keyDown("UP_ARROW")) {
+   lakshya.y = lakshya.y -2
+   playSound("My-Video564654654546654654-(online-audio-converter.com).mp3", false);
+   
+  }
+  
+  
+  
+  if (lakshya.isTouching(finishline)) {
+    stopSound("My-Video564654654546654654-(online-audio-converter.com).mp3");
+  }
+  
+  
+  
+   if (computercar.isTouching(finishline)) {
+  computercar.x = 285
+  computercar.y = 60
+  
+ }
+  
+  if (keyDown("space") && gamestate === "serve") {
+    serve()
+    gamestate = "play";
+  }
+  
+  if (lakshya.isTouching(finishline)) {
+    text("1st Winner is Lakahya",0,0)
+    fill("yellow")
+    textSize(25)
+   
+   
+    
+     text("1st Winner is Lakahya",68,170)
+    fill("yellow")
+    textSize(25)
+    }
+if (computercar.isTouching(topEdge)) {
+     text("2st Winner is Computer",0,0)
+    fill("yellow")
+    textSize(25)
+    
+     text("2st Winner is Computer",68,200)
+    fill("yellow")
+    textSize(25)
+  }
+    
+  if (lakshya.isTouching(topEdge) || computercar.isTouching(topEdge)) {
+  gamestate = "over"
+ 
+  text("Press R to Restart",100,275,stroke("black"))
+  
+  }
+  
+  if (keyDown("r") && gamestate === "over") {
+  gamestate = "serve"
+ lakshya.x = 120
+ lakshya.y = 325
+ computercar.x = 285
+ computercar.y = 320
+ 
+   computercar.velocityX = 0
+   computercar.velocityY = 0
+   
+ 
+ 
+}
+  
+  function serve(){
+    
+  }
+  
+  
+  
+  drawSprites()
+}
+</script>
