@@ -1,179 +1,36 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarRacer</title> 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-</head>
-<body>
-    <div class="carGame">
-        <div class="score"></div>
-        <div class="startScreen">
-            <p>Press here to start <br>
-               Use Arrow keys to move <br>
-               If you hit another car you will lose.  
-            </p>
-            <div>Select Level
-                <span class="level">
-                    <button id="easy">Easy</button>
-                    <button id="moderate">Moderate</button>
-                    <button id="difficult">Difficult</button>
-                </span>
-            </div>
-        </div>
-        <div class="gameArea"></div>
-    </div>
-    <script src="gameHandler.js"></script>
-</body>
-</html>
+## Lucid
+> Founded by Bernard Tse, Sam Weng, and Sheaupyng Lin, Lucid Motors, Inc. was created in 2007, originally "focused on building electric vehicle batteries and powertrains for other vehicle manufacturers". Eventually the company moved to all electric car manufacturing after many began to invest. 
 
-<script>
-const score = document.querySelector('.score');
-const startScreen = document.querySelector('.startScreen');
-const gameArea = document.querySelector('.gameArea');
-const level = document.querySelector('.level');
+### 2024 Lucid Gravity
+> **Overview:** 
+- Duel electric motors
+- All wheel drive
+- Performance-oriented Grand Touring trim
 
-// loading audio files
+![]({{site.baseurl}}/images/gravity.png "test")
 
-let gameStart = new Audio();
-let gameOver = new Audio();
-
-gameStart.src = "assets/audio/game_theme.mp3";
-gameOver.src = "assets/audio/gameOver_theme.mp3";
+| Model | Estimated Price | Horsepower |
+| - | - | - |
+| Pure | $90,000 | 1,000 |
+| Touring | $110,000 | ~1,100 |
+| Grand Touring | $140,000 | ~1,100 |
+| Grand Touring Performance | $170,000 | ~1,100 |
+| Sapphire | $250,000 | 1,200 |
 
 
-const levelSpeed = {easy: 7, moderate: 10, difficult: 14};
+### Lucid Air
+> **Overview:**
+- Lucid's "main", most popular car with 
+- In 2018, the Lucid prototype gained media popularity by "smoking" other electric car models such as those made by Tesla
+- Many upgraded versions have been produced up until they started production on their new, unreleased 2024 Lucid Gravity 
 
-let keys = {
-    ArrowUp: false,
-    ArrowDown: false,
-    ArrowLeft: false,
-    ArrowRight: false
-}
-let player = { speed: 7, score: 0 };
-level.addEventListener('click', (e)=> {
-    player.speed = levelSpeed[e.target.id];
-});
-
-startScreen.addEventListener('click', () => {
-    // gameArea.classList.remove('hide');
-    startScreen.classList.add('hide');
-    gameArea.innerHTML = "";
-
-    player.start = true;
-    gameStart.play();
-    gameStart.loop = true;
-    player.score = 0;
-    window.requestAnimationFrame(gamePlay);
-
-    for(let i=0; i<5; i++){
-        let roadLineElement = document.createElement('div');
-        roadLineElement.setAttribute('class', 'roadLines');
-        roadLineElement.y = (i*150);
-        roadLineElement.style.top = roadLineElement.y + "px";
-        gameArea.appendChild(roadLineElement);
-    }
-
-    let carElement = document.createElement('div');
-    carElement.setAttribute('class', 'car');
-    gameArea.appendChild(carElement);
-
-    player.x = carElement.offsetLeft;
-    player.y = carElement.offsetTop  ;
-
-    for(let i=0; i<3; i++){
-        let enemyCar = document.createElement('div');
-        enemyCar.setAttribute('class', 'enemyCar');
-        enemyCar.y = ((i+1) * 350) * - 1;
-        enemyCar.style.top = enemyCar.y + "px";
-        enemyCar.style.backgroundColor = randomColor();
-        enemyCar.style.left = Math.floor(Math.random() * 350) + "px";
-        gameArea.appendChild(enemyCar);
-    }
-});
-
-function randomColor(){
-    function c(){
-        let hex = Math.floor(Math.random() * 256).toString(16);
-        return ("0"+ String(hex)).substr(-2);
-    }
-    return "#"+c()+c()+c();
-}
-
-function onCollision(a,b){
-    aRect = a.getBoundingClientRect();
-    bRect = b.getBoundingClientRect();
-
-    return !((aRect.top >  bRect.bottom) || (aRect.bottom <  bRect.top) ||
-        (aRect.right <  bRect.left) || (aRect.left >  bRect.right)); 
-}
-
-function onGameOver() {
-    player.start = false;
-    gameStart.pause();
-    gameOver.play();
-    startScreen.classList.remove('hide');
-    startScreen.innerHTML = "Game Over <br> Your final score is " + player.score + "<br> Press here to restart the game.";
-}
-
-function moveRoadLines(){
-    let roadLines = document.querySelectorAll('.roadLines');
-    roadLines.forEach((item)=> {
-        if(item.y >= 700){
-            item.y -= 750;
-        }
-        item.y += player.speed;
-        item.style.top = item.y + "px";
-    });
-}
-
-function moveEnemyCars(carElement){
-    let enemyCars = document.querySelectorAll('.enemyCar');
-    enemyCars.forEach((item)=> {
-
-        if(onCollision(carElement, item)){
-            onGameOver();
-        }
-        if(item.y >= 750){
-            item.y = -300;
-            item.style.left = Math.floor(Math.random() * 350) + "px";
-        }
-        item.y += player.speed;
-        item.style.top = item.y + "px";
-    });
-} 
-
-function gamePlay() {
-    let carElement = document.querySelector('.car');
-    let road = gameArea.getBoundingClientRect();
-
-    if(player.start){
-        moveRoadLines();
-        moveEnemyCars(carElement);
-            
-        if(keys.ArrowUp && player.y > (road.top + 70)) player.y -= player.speed;
-        if(keys.ArrowDown && player.y < (road.bottom - 85)) player.y += player.speed;
-        if(keys.ArrowLeft && player.x > 0) player.x -= player.speed;
-        if(keys.ArrowRight && player.x < (road.width - 70)) player.x += player.speed;
-
-        carElement.style.top = player.y + "px";
-        carElement.style.left = player.x + "px";
-
-        window.requestAnimationFrame(gamePlay);
-
-        player.score++;
-        const ps = player.score - 1;
-        score.innerHTML = 'Score: ' + ps;          
-    }
-}
-document.addEventListener('keydown', (e)=>{
-    e.preventDefault();
-    keys[e.key] = true;
-});
-
-document.addEventListener('keyup', (e)=>{
-    e.preventDefault();
-    keys[e.key] = false;
-});
-</script>
+| Lucid Air Model | EPA Range | Horsepower | Price |
+| - | - | - | - |
+| Dream Edition Range (19″ wheels) | 520 mi. | 933 | $169,000 |
+| Dream Edition Range (21″ wheels) | 481 mi. | 933 | $169,000 |
+| Dream Edition Performance (19″ wheels) | 471 mi. | 1111 | $169,000 |
+| Dream Edition Performance (21″ wheels) | 451 mi. | 1111 | $169,000 |
+| Grand Touring (19″ wheels) | 516 mi. | 800 | $139,000 |
+| Grand Touring (21″ wheels) | 469 mi. | 800 | $139,000 |
+| Touring | 406 mi. | 620 | $95,000 |
+| Pure | 406 mi. | 480 | $77,400 |
