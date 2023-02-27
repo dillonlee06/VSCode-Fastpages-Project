@@ -7,7 +7,7 @@ title: College Board Write Up
 
 # Important links
 - [Runtime Video](https://youtu.be/4FL82PGx8-U)
-- [Simple Demo Video]()
+- [Demo Video of Project](https://youtu.be/xeBE2QWRKNo)
 - [Original CTP Plan](https://dillonlee06.github.io/VSCode-Fastpages-Project/csp%20assignments/2023/01/29/Psplanning.html)
 
 # Row 1
