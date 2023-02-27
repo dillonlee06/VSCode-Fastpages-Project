@@ -1,7 +1,6 @@
 ---
 toc: true
 layout: post
-description: 
 categories: [CSP Assignments]
 title: Screenshots for 3.14 and 3.15
 ---

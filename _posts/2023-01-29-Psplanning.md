@@ -1,7 +1,6 @@
 ---
 toc: true
 layout: post
-description: 
 categories: [CSP Assignments]
 title: Individual PT Planning
 ---

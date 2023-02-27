@@ -1,7 +1,6 @@
 ---
 toc: true
 layout: post
-description: 
 categories: [CSP Assignments]
 title: Performance Task Scoring 2
 ---

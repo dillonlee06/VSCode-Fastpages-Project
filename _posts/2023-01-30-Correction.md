@@ -1,7 +1,6 @@
 ---
 toc: true
-layout: post
-description: 
+layout: post 
 categories: [AP Notes, CSP Assignments]
 title: MCQ Test 2 Corrections
 ---
