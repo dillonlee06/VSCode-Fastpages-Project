@@ -36,11 +36,10 @@ title: College Board Write Up
 
 # Row 5 (3.c.iv.)
 > Requirements:
-- 
+- In the add_row procedure call above, it selects the data from the parameter of "(data)" and creates a row (sequence) in order of the oldest to newest addition to the database. When the procedure is called, the code uses a "for/in" loop to repeat the process until all the data is shown in the table (iteration).
 
-# Row 6
+# Row 6 (3.d.)
 > Requirements:
-- Condition of first call: Tests what happens when someone tries to enter anything other than a number
-- Result of first call/What is tested: Does not allow the answer to be submitted due to the input box type as numerical and if someone types "e" which is a constant, an error message pops up which was coded in the program
-- Condition of second call: Tests what happens when a user tries to drag the car into the incorrect spot
-- Result of second call/What is tested: The car is reset to the original spot and does not reveal the input box and guessing part of the game until it is dragged and dropped into the correct parking spot.
+- (3.d.i.) First Call (In 3.c. add_row procedure): tr.appendChild(car)------Second Call(In 3.c. add_row procedure): tr.appendChild(chargetime) 
+- (3.d.ii.) First Call Conditions: The call can only be passed if there are no errors. If passed the check, then the data is collected from the JSON file and the next function will run.------Second Call Conditions: Same function as the first call but under different parameters: the call can only be passed if there are no errors. If passed the check, then the data is collected from the JSON file and the next function will run. 
+- (3.d.iii.) First Call Results: The procedure will move on to the next call------Second Call Results:The function of creating another row will occur (happens in the procedure call)
