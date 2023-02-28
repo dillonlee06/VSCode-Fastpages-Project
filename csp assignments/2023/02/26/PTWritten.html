@@ -117,12 +117,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#row-2-3-b">Row 2 (3. b.)</a></li>
 <li class="toc-entry toc-h1"><a href="#row-3-3bv">Row 3 (3.b.v.)</a></li>
 <li class="toc-entry toc-h1"><a href="#row-4-3c">Row 4 (3.c.)</a></li>
-<li class="toc-entry toc-h1"><a href="#row-5-3civ">Row 5 (3.c.iv.)</a>
-<ul>
-<li class="toc-entry toc-h2"><a href="#requirements">Requirements:</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h1"><a href="#row-6">Row 6</a></li>
+<li class="toc-entry toc-h1"><a href="#row-5-3civ">Row 5 (3.c.iv.)</a></li>
+<li class="toc-entry toc-h1"><a href="#row-6-3d">Row 6 (3.d.)</a></li>
 </ul><h1 id="important-links">
 <a class="anchor" href="#important-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important links</h1>
 <ul>
@@ -180,19 +176,20 @@ window.onload = wrap_img;
 <h1 id="row-5-3civ">
 <a class="anchor" href="#row-5-3civ" aria-hidden="true"><span class="octicon octicon-link"></span></a>Row 5 (3.c.iv.)</h1>
 <blockquote>
-  <h2 id="requirements">
-<a class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements:</h2>
+  <p>Requirements:</p>
+  <ul>
+    <li>In the add_row procedure call above, it selects the data from the parameter of “(data)” and creates a row (sequence) in order of the oldest to newest addition to the database. When the procedure is called, the code uses a “for/in” loop to repeat the process until all the data is shown in the table (iteration).</li>
+  </ul>
 </blockquote>
 
-<h1 id="row-6">
-<a class="anchor" href="#row-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Row 6</h1>
+<h1 id="row-6-3d">
+<a class="anchor" href="#row-6-3d" aria-hidden="true"><span class="octicon octicon-link"></span></a>Row 6 (3.d.)</h1>
 <blockquote>
   <p>Requirements:</p>
   <ul>
-    <li>Condition of first call: Tests what happens when someone tries to enter anything other than a number</li>
-    <li>Result of first call/What is tested: Does not allow the answer to be submitted due to the input box type as numerical and if someone types “e” which is a constant, an error message pops up which was coded in the program</li>
-    <li>Condition of second call: Tests what happens when a user tries to drag the car into the incorrect spot</li>
-    <li>Result of second call/What is tested: The car is reset to the original spot and does not reveal the input box and guessing part of the game until it is dragged and dropped into the correct parking spot.</li>
+    <li>(3.d.i.) First Call (In 3.c. add_row procedure): tr.appendChild(car)——Second Call(In 3.c. add_row procedure): tr.appendChild(chargetime)</li>
+    <li>(3.d.ii.) First Call Conditions: The call can only be passed if there are no errors. If passed the check, then the data is collected from the JSON file and the next function will run.——Second Call Conditions: Same function as the first call but under different parameters: the call can only be passed if there are no errors. If passed the check, then the data is collected from the JSON file and the next function will run.</li>
+    <li>(3.d.iii.) First Call Results: The procedure will move on to the next call——Second Call Results:The function of creating another row will occur (happens in the procedure call)</li>
   </ul>
 </blockquote>
 
