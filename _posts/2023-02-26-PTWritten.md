@@ -31,11 +31,12 @@ title: College Board Write Up
 # Row 4 (3.c.)
 > Requirements:
 - (3.c.i.) ![]({{site.baseurl}}/images/ptrow4.1.png "Procedure")
-- (3.c.ii.)![]({{site.baseurl}}/images/ptrow2.png "Procedure Call")
-- (3.c.iii.) The procedure 
+- (3.c.ii.)![]({{site.baseurl}}/images/ptrow4.2.png "Procedure Call")
+- (3.c.iii.) The procedure called "add_row" is used to add a row of data from my database of charging times into a table containing a certain electric car and a inputted charging time which any user could input. This gives users an idea of what other people have experienced in term of charging their different electrical cars and with that provided information, help themselves decide on what car they want to potentially look to buy in the future.
 
-# Row 5
+# Row 5 (3.c.iv.)
 > Requirements:
+- 
 
 # Row 6
 > Requirements:
