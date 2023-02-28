@@ -20,16 +20,20 @@ title: College Board Write Up
 # Row 2 (3. b.)
 > Requirements:
 - (3 .b. i.) and (3.b.ii.)
-- ![]({{site.baseurl}}/images/ptrow2.png "PT Row 2")
+- ![]({{site.baseurl}}/images/ptrow2.png "Dictionary and Use of Dictionary")
 - (3 .b. iii.) Top segment of code shows the dictionary which is named "percentage_list" which represents the percentages and answers for the game
 - (3 .b. iv.) Bottom segment of code uses the dictionary to get a random percentage (simple percentage, not meant to be a complex game) which is the "00", "10", etc. in the dictionary as well as the answer (ans) which is the value assigned to the percentage in the dictionary
 
 # Row 3 (3.b.v.)
 > Requirements:
 - The list manages complexity by easily taking all the simple percentages that I want, and compiling it all into one spot with the values of time in minutes which represents the time it will take to charge the car from that percentage. Without the use of this list, I would have to use the random math function to take a number between 0 and 99 and then make sure that it is divisible by 10 (as I want to keep the numbers simple for users) using a loop of some sorts. And then on top of that, I would have to figure out an extravagant formula to put in the program for determining the answer. My code is much simpler though as it is easy to just take a random instance from the list and assign variables for the percentage and answer in just four simple lines of code rather than potentially having to use a loop and other mathematical functions.
+
 # Row 4 (3.c.)
 > Requirements:
-- 
+- (3.c.i.) ![]({{site.baseurl}}/images/ptrow4.1.png "Procedure")
+- (3.c.ii.)![]({{site.baseurl}}/images/ptrow2.png "Procedure Call")
+- (3.c.iii.) The procedure 
+
 # Row 5
 > Requirements:
 
