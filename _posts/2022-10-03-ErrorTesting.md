@@ -27,14 +27,14 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
 
-<span class="n">alphabetList</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nx">alphabetList</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">alphabet</span><span class="p">:</span>
-    <span class="n">alphabetList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="o">:</span>
+    <span class="nx">alphabetList</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">alphabetList</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">alphabetList</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -65,14 +65,14 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">letter</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
 
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span>
 
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">alphabetList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="n">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">26</span><span class="o">:</span>
+    <span class="k">if</span> <span class="nx">alphabetList</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="nx">letter</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="nx">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
+    <span class="nx">i</span> <span class="o">+=</span> <span class="mf">1</span>
 </pre></div>
 
     </div>
@@ -110,14 +110,14 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">letter</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
 
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span>
 
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">alphabetList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="n">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">26</span><span class="o">:</span>
+    <span class="k">if</span> <span class="nx">alphabetList</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="nx">letter</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="nx">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
+    <span class="nx">i</span> <span class="o">+=</span> <span class="mf">1</span>
 </pre></div>
 
     </div>
@@ -148,13 +148,13 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">letter</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">alphabetList</span><span class="p">:</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="n">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
-    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">alphabetList</span><span class="o">:</span>
+    <span class="nx">count</span> <span class="o">=</span> <span class="mf">0</span>
+    <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">letter</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="nx">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">(</span><span class="nx">count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
+    <span class="nx">count</span> <span class="o">+=</span> <span class="mf">1</span>
 </pre></div>
 
     </div>
@@ -192,14 +192,14 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">letter</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
 
-<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nx">count</span> <span class="o">=</span> <span class="mf">0</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">alphabetList</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="n">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
-    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">alphabetList</span><span class="o">:</span>
+    <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">letter</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="nx">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">(</span><span class="nx">count</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
+    <span class="nx">count</span> <span class="o">+=</span> <span class="mf">1</span>
 </pre></div>
 
     </div>
@@ -230,14 +230,14 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">evens</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">evens</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span>
 
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="n">evens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+<span class="k">while</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mf">10</span><span class="o">:</span>
+    <span class="nx">evens</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="nx">i</span> <span class="o">+=</span> <span class="mf">2</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">evens</span><span class="p">)</span>    
+<span class="nx">print</span><span class="p">(</span><span class="nx">evens</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -275,14 +275,14 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">odds</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">odds</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nx">i</span> <span class="o">=</span> <span class="mf">1</span>
 
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="n">odds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+<span class="k">while</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mf">10</span><span class="o">:</span>
+    <span class="nx">odds</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="nx">i</span> <span class="o">+=</span> <span class="mf">2</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">odds</span><span class="p">)</span>    
+<span class="nx">print</span><span class="p">(</span><span class="nx">odds</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -313,14 +313,14 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">odds</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="mf">7</span><span class="p">,</span><span class="mf">8</span><span class="p">,</span><span class="mf">9</span><span class="p">,</span><span class="mf">10</span><span class="p">]</span>
+<span class="nx">odds</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="n">odds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">numbers</span><span class="o">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">==</span> <span class="mf">0</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">odds</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">odds</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">odds</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -358,14 +358,14 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">odds</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="mf">7</span><span class="p">,</span><span class="mf">8</span><span class="p">,</span><span class="mf">9</span><span class="p">,</span><span class="mf">10</span><span class="p">]</span>
+<span class="nx">odds</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">odds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">numbers</span><span class="o">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">==</span> <span class="mf">1</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">odds</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">odds</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">odds</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -396,21 +396,21 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">newNumbers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nx">newNumbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span>
 
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
-    <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">100</span><span class="o">:</span>
+    <span class="nx">numbers</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="nx">i</span> <span class="o">+=</span> <span class="mf">1</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">newNumbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">newNumbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">numbers</span><span class="o">:</span>
+    <span class="k">if</span> <span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mf">5</span> <span class="o">==</span> <span class="mf">0</span><span class="o">:</span>
+        <span class="nx">newNumbers</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">==</span> <span class="mf">0</span><span class="o">:</span>
+        <span class="nx">newNumbers</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">newNumbers</span><span class="p">)</span> 
+<span class="nx">print</span><span class="p">(</span><span class="nx">newNumbers</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -448,21 +448,21 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">newNumbers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nx">newNumbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span>
 
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">101</span><span class="p">:</span>
-    <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">101</span><span class="o">:</span>
+    <span class="nx">numbers</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+    <span class="nx">i</span> <span class="o">+=</span> <span class="mf">1</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
-        <span class="n">newNumbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">newNumbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">numbers</span><span class="o">:</span>
+    <span class="k">if</span> <span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mf">10</span> <span class="o">==</span> <span class="mf">5</span><span class="o">:</span>
+        <span class="nx">newNumbers</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">==</span> <span class="mf">0</span><span class="o">:</span>
+        <span class="nx">newNumbers</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">newNumbers</span><span class="p">)</span> 
+<span class="nx">print</span><span class="p">(</span><span class="nx">newNumbers</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -493,21 +493,21 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span>
-         <span class="s2">&quot;fries&quot;</span><span class="p">:</span> <span class="mf">1.99</span><span class="p">,</span>
-         <span class="s2">&quot;drink&quot;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">}</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="o">:</span> <span class="mf">3.99</span><span class="p">,</span>
+         <span class="s2">&quot;fries&quot;</span><span class="o">:</span> <span class="mf">1.99</span><span class="p">,</span>
+         <span class="s2">&quot;drink&quot;</span><span class="o">:</span> <span class="mf">0.99</span><span class="p">}</span>
+<span class="nx">total</span> <span class="o">=</span> <span class="mf">0</span>
 
-<span class="c1">#shows the user the menu and prompts them to select an item</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menu&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="c1">#why does v have &quot;str&quot; in front of it?</span>
+<span class="err">#</span><span class="nx">shows</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">the</span> <span class="nx">menu</span> <span class="nx">and</span> <span class="nx">prompts</span> <span class="nx">them</span> <span class="nx">to</span> <span class="nx">select</span> <span class="nx">an</span> <span class="nx">item</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Menu&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="nx">k</span><span class="p">,</span><span class="nx">v</span> <span class="k">in</span> <span class="nx">menu</span><span class="p">.</span><span class="nx">items</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">print</span><span class="p">(</span><span class="nx">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">(</span><span class="nx">v</span><span class="p">))</span> <span class="err">#</span><span class="nx">why</span> <span class="nx">does</span> <span class="nx">v</span> <span class="nx">have</span> <span class="s2">&quot;str&quot;</span> <span class="k">in</span> <span class="nx">front</span> <span class="k">of</span> <span class="nx">it</span><span class="o">?</span>
 
-<span class="c1">#ideally the code should prompt the user multiple times</span>
-<span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu&quot;</span><span class="p">)</span>
+<span class="err">#</span><span class="nx">ideally</span> <span class="nx">the</span> <span class="nx">code</span> <span class="nx">should</span> <span class="nx">prompt</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">multiple</span> <span class="nx">times</span>
+<span class="nx">item</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu&quot;</span><span class="p">)</span>
 
-<span class="c1">#code should add the price of the menu items selected by the user </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+<span class="err">#</span><span class="nx">code</span> <span class="nx">should</span> <span class="nx">add</span> <span class="nx">the</span> <span class="nx">price</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">menu</span> <span class="nx">items</span> <span class="nx">selected</span> <span class="nx">by</span> <span class="nx">the</span> <span class="nx">user</span> 
+<span class="nx">print</span><span class="p">(</span><span class="nx">total</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -549,28 +549,28 @@ drink  $0.99
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span>
-         <span class="s2">&quot;fries&quot;</span><span class="p">:</span> <span class="mf">2.99</span><span class="p">,</span>
-         <span class="s2">&quot;drink&quot;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">}</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="o">:</span> <span class="mf">3.99</span><span class="p">,</span>
+         <span class="s2">&quot;fries&quot;</span><span class="o">:</span> <span class="mf">2.99</span><span class="p">,</span>
+         <span class="s2">&quot;drink&quot;</span><span class="o">:</span> <span class="mf">0.99</span><span class="p">}</span>
+<span class="nx">total</span> <span class="o">=</span> <span class="mf">0</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello! Please review our menu and type what you would like to order&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menu:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="c1"># shows the name of the item on the menu followed by its price</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Hello! Please review our menu and type what you would like to order&quot;</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Menu:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="nx">k</span><span class="p">,</span><span class="nx">v</span> <span class="k">in</span> <span class="nx">menu</span><span class="p">.</span><span class="nx">items</span><span class="p">()</span><span class="o">:</span>
+    <span class="nx">print</span><span class="p">(</span><span class="nx">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">(</span><span class="nx">v</span><span class="p">))</span> <span class="err">#</span> <span class="nx">shows</span> <span class="nx">the</span> <span class="nx">name</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">item</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">menu</span> <span class="nx">followed</span> <span class="nx">by</span> <span class="nx">its</span> <span class="nx">price</span>
 
-<span class="n">order</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">while</span> <span class="n">order</span><span class="p">:</span>   <span class="c1"># user will be asked for their order multiple times</span>
-    <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;choose your order&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span> 
-        <span class="n">total</span><span class="o">+=</span> <span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;you ordered:&quot;</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;your total is now:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>           <span class="c1"># if the person types something in wrong or finishes their order, it stops</span>
-        <span class="n">order</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nx">order</span> <span class="o">=</span> <span class="nx">True</span>
+<span class="k">while</span> <span class="nx">order</span><span class="o">:</span>   <span class="err">#</span> <span class="nx">user</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">asked</span> <span class="k">for</span> <span class="nx">their</span> <span class="nx">order</span> <span class="nx">multiple</span> <span class="nx">times</span>
+    <span class="nx">item</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">&quot;choose your order&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nx">item</span> <span class="k">in</span> <span class="nx">menu</span><span class="p">.</span><span class="nx">keys</span><span class="p">()</span><span class="o">:</span> 
+        <span class="nx">total</span><span class="o">+=</span> <span class="nx">menu</span><span class="p">[</span><span class="nx">item</span><span class="p">]</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">&quot;you ordered:&quot;</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">&quot;your total is now:&quot;</span><span class="p">,</span> <span class="nx">total</span><span class="p">)</span>
+    <span class="k">else</span><span class="o">:</span>           <span class="err">#</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">person</span> <span class="nx">types</span> <span class="nx">something</span> <span class="k">in</span> <span class="nx">wrong</span> <span class="nx">or</span> <span class="nx">finishes</span> <span class="nx">their</span> <span class="nx">order</span><span class="p">,</span> <span class="nx">it</span> <span class="nx">stops</span>
+        <span class="nx">order</span> <span class="o">=</span> <span class="nx">False</span>
         
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your Total is:&quot;</span><span class="p">,</span> <span class="s2">&quot;$&quot;</span><span class="p">,</span><span class="n">total</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enjoy your meal&quot;</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Your Total is:&quot;</span><span class="p">,</span> <span class="s2">&quot;$&quot;</span><span class="p">,</span><span class="nx">total</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Enjoy your meal&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
