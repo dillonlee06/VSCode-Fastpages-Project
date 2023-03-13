@@ -1,0 +1,16 @@
+{
+    "Car":{
+      "1":"Lucid Air",
+      "2":"Tesla Model X",
+      "3":"Tesla Model S",
+      "4":"Rivian R1T",
+      "5":"NIO ET5"
+    },
+    "Charge Time (0-100) in Hours":{
+      "1":10.2,
+      "2":7.5,
+      "3":7.7,
+      "4":16.1,
+      "5":11.7
+    }
+}
