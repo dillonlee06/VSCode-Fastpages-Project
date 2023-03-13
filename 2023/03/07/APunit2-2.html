@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      14 min read
     
 </span></p>
 
@@ -372,9 +372,11 @@ Allows for more interaction between the notebook and the user because IPython in
 <a class="anchor" href="#base64" aria-hidden="true"><span class="octicon octicon-link"></span></a>base64<a class="anchor-link" href="#base64"> </a>
 </h3>
 <blockquote>
-<p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal?</p>
+<p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal?
+Base64 is mainly used for images while binary and hexadecimals are not. Binary and Hexadecimal also have a specific base while Base64 is used to refer to how binary data is encoded to text.</p>
 <ul>
-<li>Translate first 3 letters of your name to Base64.</li>
+<li>Translate first 3 letters of your name to Base64.
+"Dillon" --&gt; RGls</li>
 </ul>
 </blockquote>
 <h3 id="numpy">
@@ -389,9 +391,12 @@ Allows for more interaction between the notebook and the user because IPython in
 <blockquote>
 <p>Input and Output (I/O) is a fundamental of all Computer Programming. Input/output (I/O) buffering is a technique used to optimize I/O operations.  In large quantities of data, how many frames of input the server currently has queued is the buffer.  In this example, there is a very large picture that lags.</p>
 <ul>
-<li>Where have you been a consumer of buffering?  </li>
-<li>From your consumer experience, what effects have you experienced from buffering?  </li>
-<li>How do these effects apply to images?</li>
+<li>Where have you been a consumer of buffering?<br>
+Sometimes as a consumer of buffering, I watch Twitch streams which can experience buffering due to too many bits or too many viewers. Sometimes do to signals, the car radio also experiences buffering.</li>
+<li>From your consumer experience, what effects have you experienced from buffering?<br>
+Due to too much data, effects of buffering can ruin an experience as a consumer due to the reduced quality or functionality of whatever starts to buffer.</li>
+<li>How do these effects apply to images?
+Anything that is displayed and is buffered can become blurry and harder to see.</li>
 </ul>
 </blockquote>
 
@@ -407,10 +412,14 @@ Allows for more interaction between the notebook and the user because IPython in
 <blockquote>
 <p>Introduction to creating meta data and manipulating images.  Look at each procedure and explain the the purpose and results of this program.  Add any insights or challenges as you explored this program.</p>
 <ul>
-<li>Does this code seem like a series of steps are being performed?</li>
-<li>Describe Grey Scale algorithm in English or Pseudo code?</li>
-<li>Describe scale image?  What is before and after on pixels in three images?</li>
-<li>Is scale image a type of compression?  If so, line it up with College Board terms described?</li>
+<li>Does this code seem like a series of steps are being performed?
+The code slightly seems like a series of steps. There are multiple functions being performed in order and there are many operations done within each function.</li>
+<li>Describe Grey Scale algorithm in English or Pseudo code?
+The algorithm first receives a scaled size of the image, and data is retrieved from the image. The amount of pixels retrieved is then averaged and appended to the data. The image data is then returned.</li>
+<li>Describe scale image?  What is before and after on pixels in three images?
+The scale image scales the height and width of the image to a certain amount. Some images are scaled to a bigger size while others are shrunk.</li>
+<li>Is scale image a type of compression?  If so, line it up with College Board terms described?
+Scale is a type of compression - lossless compression. Original data is not being permanently removed, and instead, the file size is reduced by removing metadata - therefore, lossless.</li>
 </ul>
 </blockquote>
 
