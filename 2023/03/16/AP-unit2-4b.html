@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -224,7 +224,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Fetch results of Schema</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('users')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('cars')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
@@ -246,12 +246,12 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(0, 'id', 'INTEGER', 1, None, 1)
-(1, '_name', 'VARCHAR(255)', 1, None, 0)
-(2, '_uid', 'VARCHAR(255)', 1, None, 0)
-(3, '_mascot', 'VARCHAR(255)', 1, None, 0)
-(4, '_car', 'VARCHAR(255)', 1, None, 0)
-(5, '_mile', 'INTEGER', 0, None, 0)</p>
+<p>(0, 'id', 'INTEGER', 1, None, 1)</p>
+<p>(1, '_name', 'VARCHAR(255)', 1, None, 0)</p>
+<p>(2, '_uid', 'VARCHAR(255)', 1, None, 0)</p>
+<p>(3, '_chargetime', 'VARCHAR(255)', 1, None, 0)</p>
+<p>(4, '_car', 'VARCHAR(255)', 1, None, 0)</p>
+<p>(5, '_dreamcar', 'INTEGER', 0, None, 0)</p>
 
 </div>
 </div>
@@ -330,12 +330,12 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(1, 'Thomas Edison', 'toby', 'Tesla Model Y', '7 Hours', 'Tesla Model X')
-(2, 'Nikola Tesla', 'niko', 'Lucid Air','10 Hours', 'Tesla Model S')
-(3, 'Alexander Graham Bell', 'lex', 'Tesla Model X', '7 Hours', 'Honda Civic 2020')
-(4, 'Eli Whitney', 'whit', 'Tesla Model S', '7 Hours', 'Lucid Air')
-(5, 'Indiana Jones', 'indi', 'Tesla Model 3', '7 Hours', 'Tesla Model S')
-(6, 'Marion Ravenwood', 'raven', 'NIO ec6', '9 Hours', 'Tesla Model 3')</p>
+<p>(1, 'Thomas Edison', 'toby', 'Tesla Model Y', '7 Hours', 'Tesla Model X')</p>
+<p>(2, 'Nikola Tesla', 'niko', 'Lucid Air','10 Hours', 'Tesla Model S')</p>
+<p>(3, 'Alexander Graham Bell', 'lex', 'Tesla Model X', '7 Hours', 'Honda Civic 2020')</p>
+<p>(4, 'Eli Whitney', 'whit', 'Tesla Model S', '7 Hours', 'Lucid Air')</p>
+<p>(5, 'Indiana Jones', 'indi', 'Tesla Model 3', '7 Hours', 'Tesla Model S')</p>
+<p>(6, 'Marion Ravenwood', 'raven', 'NIO ec6', '9 Hours', 'Tesla Model 3')</p>
 
 </div>
 </div>
@@ -602,44 +602,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
-    <span class="n">operation</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter: (C)reate (R)ead (U)pdate or (D)elete or (S)chema"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'c'</span><span class="p">:</span>
-        <span class="n">create</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'r'</span><span class="p">:</span>
-        <span class="n">read</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'u'</span><span class="p">:</span>
-        <span class="n">update</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'d'</span><span class="p">:</span>
-        <span class="n">delete</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'s'</span><span class="p">:</span>
-        <span class="n">schema</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># Escape Key</span>
-        <span class="k">return</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Please enter c, r, u, or d"</span><span class="p">)</span> 
-    <span class="n">menu</span><span class="p">()</span> <span class="c1"># recursion, repeat menu</span>
-        
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">menu</span><span class="p">()</span> <span class="c1"># start menu</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Perform Jupyter 'Run All' prior to starting menu"</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -714,6 +676,14 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This code imports the SQLite3 library, establishes a connection to a SQLite database, and then creates a cursor object. The cursor object is then used to execute an SQL statement that creates a new table called "charges". The new table is being created by selecting certain columns (_name, _uid, _chargetime, _car, and _dream) from an existing table called "cars". The try block is used to execute the SQL statement with the cursor object and commit the changes made to the database, while any errors that occur are caught and printed out. After the changes are committed and the cursor is closed, the connection to the database is ended.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -752,6 +722,30 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>('Thomas Edison', 'toby', 'Tesla Model Y', '7 Hours', 'Tesla Model X')</p>
+<p>('Nikola Tesla', 'niko', 'Lucid Air','10 Hours', 'Tesla Model S')</p>
+<p>('Alexander Graham Bell', 'lex', 'Tesla Model X', '7 Hours', 'Honda Civic 2020')</p>
+<p>('Eli Whitney', 'whit', 'Tesla Model S', '7 Hours', 'Lucid Air')</p>
+<p>('Indiana Jones', 'indi', 'Tesla Model 3', '7 Hours', 'Tesla Model S')</p>
+<p>('Marion Ravenwood', 'raven', 'NIO ec6', '9 Hours', 'Tesla Model 3')</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code opens a connection to a SQLite database file specified by a variable called database. It creates a cursor object to execute SQLite queries on the database.
+Then, it executes a SELECT query to retrieve all the rows from a table called "charges". It stores the result in a variable called results.
+It then checks the length of the results list. If the list is empty, it prints a message to the console saying that the table is empty. Otherwise, it iterates over the results list and prints each row to the console.
+Finally, it closes the cursor and connection objects.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
