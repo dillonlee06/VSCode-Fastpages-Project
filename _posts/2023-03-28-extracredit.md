@@ -51,4 +51,5 @@ Through this presentation, I learned much more about the California State Univer
 # **Pics**
 ![]({{site.baseurl}}/images/csusm1.png "Pic of event")
 ![]({{site.baseurl}}/images/csusm2.png "Pic of survey")
-![]({{site.baseurl}}/images/csusm3.png "Pic of interactive activity")
+![]({{site.baseurl}}/images/csusm3.png "Pic of activity 1")
+![]({{site.baseurl}}/images/csusm4.png "Pic of activity 2")
