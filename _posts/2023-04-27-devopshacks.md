@@ -12,6 +12,9 @@ title: Devops Hacks
 > Sample Answer:
 - DuckDNS provides a free dynamic DNS service that allows users to assign a domain name to a dynamic IP address. It can be used as an alternative to Freenom, which also offers free domain names. The choice between the two depends on individual needs and preferences, such as ease of use, availability of domain extensions, and customer support.
 
+## Reflection of Lesson
+The post outlines many DevOps hacks that developers and AP CSP students may find beneficial. The objective of DuckDNS, a free DNS service that enables users to assign a domain name to a dynamic IP address, is covered in the opening of the article. The importance of virtual desktops, such as KASM, in allowing users to use their PCs from any location with an internet connection is also covered in the article. The author contrasts LibreSSL with OpenSSL, two open-source SSL and TLS implementations, and talks about current OpenSSL security flaws. Additionally, the author offers FRQ techniques for EC2 AWS, such as checking for obsolete Nginx and Docker functionality and elucidating murky deployment instructions. The author then draws a diagram and describes the advantages and disadvantages of utilizing Duck.
+
 # FRQ
 > Complete the answers in your own words
 - Question 1: How does AWS Work?
@@ -53,44 +56,62 @@ title: Devops Hacks
 - ![]({{site.baseurl}}/images/7.png "14")
 
 > What are the pros and cons of using Duck DNS
-- ans
+- **Pros:**
+- Duck DNS is free
+- Can be integrated with various routers, services, and clients
+- Supports multiple domains and subdomains
+- Allows for the use of custom domain names
+- Provides APIs for programmatic updates and management
+- Offers HTTPS encryption and verification through Let's Encrypt
+- **Cons:**
+- Supports multiple domains and subdomains
+- Allows for the use of custom domain names
+- Provides APIs for programmatic updates and management
+- Offers HTTPS encryption and verification through Let's Encrypt
+- No availability or dependability guarantee; few customer support choices
+- Limited customization choices compared to premium DNS services
+- - DNS upgrades may take some time to propagate; may raise security issues if improperly protected and configured; may need periodic updates to retain domain ownership
 
 HACK 2 - Write a reflection
-
 - Why do we use DNS?
+- Human-readable domain names, like google.com, are converted into IP addresses via the Domain Name System (DNS), which is then used by computers to communicate with one another across the internet. Users can access websites and services more easily since they no longer need to remember complicated IP addresses.
 - How does Duck DNS work?
+- By giving users a domain name and a service to automatically change the IP address connected to that domain name, Duck DNS functions. Users that have dynamic IP addresses can use the service to generate a custom hostname that corresponds to their current IP address. 
 - What makes Duck DNS unique?
+- Because it provides a free dynamic DNS service that enables customers to give a domain name to a device with a dynamic IP address that changes on a regular basis, Duck DNS is special. It is a well-liked option for small-scale and do-it-yourself projects because it is open source, easy to use, and compatible with numerous tools and services.
 - How is Duck DNS useful for our projects?
+- Duck DNS is useful for our projects as it provides a free and easy-to-use dynamic DNS service, which allows us to access our projects from anywhere with a static hostname. This eliminates the need for a static IP address and makes it easier to connect to our projects remotely.
 - What are the steps to set up Duck DNS?
+- You must register for a Duck DNS account, select a domain name, then download and set up the Duck DNS client on your device in order to set up Duck DNS. Following configuration, the client will routinely update the IP address linked to your domain name, making sure that your device may be accessed via the domain name.
 
 
 ## Guide to SQLite vs AWS alternate databases Quiz
 > What is the main difference between relational and non-relational databases?
 
-A. Relational databases are only used for structured data, while non-relational databases are only used for unstructured data.
+- A. Relational databases are only used for structured data, while non-relational databases are only used for unstructured data.
 
-B. Relational databases can easily handle high data volumes, while non-relational databases cannot.
+- B. Relational databases can easily handle high data volumes, while non-relational databases cannot.
 
-C. Relational databases are based on tables and use SQL, while non-relational databases are based on collections and use JSON-like documents.
+- **C. Relational databases are based on tables and use SQL, while non-relational databases are based on collections and use JSON-like documents.**
 
-D. Relational databases are more expensive than non-relational databases.
+- D. Relational databases are more expensive than non-relational databases.
 
 > Which AWS database service is best suited for applications that require low-latency speed?
 
-A. Amazon ElastiCache
+- **A. Amazon ElastiCache**
 
-B. Amazon Neptune
+- B. Amazon Neptune
 
-C. Amazon DocumentDB
+- C. Amazon DocumentDB
 
-D. Amazon RDS
+- D. Amazon RDS
 
 > What is the purpose of the code example provided in the lesson?
 
-A. To demonstrate how to create a table in Amazon Aurora.
+- A. To demonstrate how to create a table in Amazon Aurora.
 
-B. To show how to query data from a DynamoDB table.
+- B. To show how to query data from a DynamoDB table.
 
-C. To provide an example of how to connect to a database instance in RDS using Python.
+- **C. To provide an example of how to connect to a database instance in RDS using Python.**
 
-D. To showcase how to insert data into a MySQL table.
+- D. To showcase how to insert data into a MySQL table.
