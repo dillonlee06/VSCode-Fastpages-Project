@@ -49,22 +49,24 @@ title: Devops Hacks
 INSERT IMAGE
 
 
-HACKS
-HACK 1 - Create a diagram (canva)
+## Duck DNS HACKS
+> HACK 1 - Create a diagram (canva)
+- image
 
-What are the pros and cons of using Duck DNS
-Show a diagram of an application running on AWS using a Duck DNS system
+> What are the pros and cons of using Duck DNS
+- ans
+
 HACK 2 - Write a reflection
 
-Why do we use DNS?
-How does Duck DNS work?
-What makes Duck DNS unique?
-How is Duck DNS useful for our projects?
-What are the steps to set up Duck DNS?
+- Why do we use DNS?
+- How does Duck DNS work?
+- What makes Duck DNS unique?
+- How is Duck DNS useful for our projects?
+- What are the steps to set up Duck DNS?
 
 
 ## Guide to SQLite vs AWS alternate databases Quiz
-What is the main difference between relational and non-relational databases?
+> What is the main difference between relational and non-relational databases?
 
 A. Relational databases are only used for structured data, while non-relational databases are only used for unstructured data.
 
@@ -74,7 +76,7 @@ C. Relational databases are based on tables and use SQL, while non-relational da
 
 D. Relational databases are more expensive than non-relational databases.
 
-Which AWS database service is best suited for applications that require low-latency speed?
+> Which AWS database service is best suited for applications that require low-latency speed?
 
 A. Amazon ElastiCache
 
@@ -84,7 +86,7 @@ C. Amazon DocumentDB
 
 D. Amazon RDS
 
-What is the purpose of the code example provided in the lesson?
+> What is the purpose of the code example provided in the lesson?
 
 A. To demonstrate how to create a table in Amazon Aurora.
 
