@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      8 min read
     
 </span></p>
 
@@ -118,6 +118,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#introduction">Introduction:</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#introductory-question">Introductory Question</a></li>
+<li class="toc-entry toc-h2"><a href="#reflection-of-lesson">Reflection of Lesson</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#frq">FRQ</a></li>
@@ -147,6 +148,10 @@ window.onload = wrap_img;
     <li>DuckDNS provides a free dynamic DNS service that allows users to assign a domain name to a dynamic IP address. It can be used as an alternative to Freenom, which also offers free domain names. The choice between the two depends on individual needs and preferences, such as ease of use, availability of domain extensions, and customer support.</li>
   </ul>
 </blockquote>
+
+<h2 id="reflection-of-lesson">
+<a class="anchor" href="#reflection-of-lesson" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reflection of Lesson</h2>
+<p>The post outlines many DevOps hacks that developers and AP CSP students may find beneficial. The objective of DuckDNS, a free DNS service that enables users to assign a domain name to a dynamic IP address, is covered in the opening of the article. The importance of virtual desktops, such as KASM, in allowing users to use their PCs from any location with an internet connection is also covered in the article. The author contrasts LibreSSL with OpenSSL, two open-source SSL and TLS implementations, and talks about current OpenSSL security flaws. Additionally, the author offers FRQ techniques for EC2 AWS, such as checking for obsolete Nginx and Docker functionality and elucidating murky deployment instructions. The author then draws a diagram and describes the advantages and disadvantages of utilizing Duck.</p>
 
 <h1 id="frq">
 <a class="anchor" href="#frq" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ</h1>
@@ -220,18 +225,40 @@ window.onload = wrap_img;
 <blockquote>
   <p>What are the pros and cons of using Duck DNS</p>
   <ul>
-    <li>ans</li>
+    <li><strong>Pros:</strong></li>
+    <li>Duck DNS is free</li>
+    <li>Can be integrated with various routers, services, and clients</li>
+    <li>Supports multiple domains and subdomains</li>
+    <li>Allows for the use of custom domain names</li>
+    <li>Provides APIs for programmatic updates and management</li>
+    <li>Offers HTTPS encryption and verification through Let’s Encrypt</li>
+    <li><strong>Cons:</strong></li>
+    <li>Supports multiple domains and subdomains</li>
+    <li>Allows for the use of custom domain names</li>
+    <li>Provides APIs for programmatic updates and management</li>
+    <li>Offers HTTPS encryption and verification through Let’s Encrypt</li>
+    <li>No availability or dependability guarantee; few customer support choices</li>
+    <li>Limited customization choices compared to premium DNS services</li>
+    <li>
+      <ul>
+        <li>DNS upgrades may take some time to propagate; may raise security issues if improperly protected and configured; may need periodic updates to retain domain ownership</li>
+      </ul>
+    </li>
   </ul>
 </blockquote>
 
 <p>HACK 2 - Write a reflection</p>
-
 <ul>
   <li>Why do we use DNS?</li>
+  <li>Human-readable domain names, like google.com, are converted into IP addresses via the Domain Name System (DNS), which is then used by computers to communicate with one another across the internet. Users can access websites and services more easily since they no longer need to remember complicated IP addresses.</li>
   <li>How does Duck DNS work?</li>
+  <li>By giving users a domain name and a service to automatically change the IP address connected to that domain name, Duck DNS functions. Users that have dynamic IP addresses can use the service to generate a custom hostname that corresponds to their current IP address.</li>
   <li>What makes Duck DNS unique?</li>
+  <li>Because it provides a free dynamic DNS service that enables customers to give a domain name to a device with a dynamic IP address that changes on a regular basis, Duck DNS is special. It is a well-liked option for small-scale and do-it-yourself projects because it is open source, easy to use, and compatible with numerous tools and services.</li>
   <li>How is Duck DNS useful for our projects?</li>
+  <li>Duck DNS is useful for our projects as it provides a free and easy-to-use dynamic DNS service, which allows us to access our projects from anywhere with a static hostname. This eliminates the need for a static IP address and makes it easier to connect to our projects remotely.</li>
   <li>What are the steps to set up Duck DNS?</li>
+  <li>You must register for a Duck DNS account, select a domain name, then download and set up the Duck DNS client on your device in order to set up Duck DNS. Following configuration, the client will routinely update the IP address linked to your domain name, making sure that your device may be accessed via the domain name.</li>
 </ul>
 
 <h2 id="guide-to-sqlite-vs-aws-alternate-databases-quiz">
@@ -240,37 +267,58 @@ window.onload = wrap_img;
   <p>What is the main difference between relational and non-relational databases?</p>
 </blockquote>
 
-<p>A. Relational databases are only used for structured data, while non-relational databases are only used for unstructured data.</p>
-
-<p>B. Relational databases can easily handle high data volumes, while non-relational databases cannot.</p>
-
-<p>C. Relational databases are based on tables and use SQL, while non-relational databases are based on collections and use JSON-like documents.</p>
-
-<p>D. Relational databases are more expensive than non-relational databases.</p>
+<ul>
+  <li>
+    <p>A. Relational databases are only used for structured data, while non-relational databases are only used for unstructured data.</p>
+  </li>
+  <li>
+    <p>B. Relational databases can easily handle high data volumes, while non-relational databases cannot.</p>
+  </li>
+  <li>
+    <p><strong>C. Relational databases are based on tables and use SQL, while non-relational databases are based on collections and use JSON-like documents.</strong></p>
+  </li>
+  <li>
+    <p>D. Relational databases are more expensive than non-relational databases.</p>
+  </li>
+</ul>
 
 <blockquote>
   <p>Which AWS database service is best suited for applications that require low-latency speed?</p>
 </blockquote>
 
-<p>A. Amazon ElastiCache</p>
-
-<p>B. Amazon Neptune</p>
-
-<p>C. Amazon DocumentDB</p>
-
-<p>D. Amazon RDS</p>
+<ul>
+  <li>
+    <p><strong>A. Amazon ElastiCache</strong></p>
+  </li>
+  <li>
+    <p>B. Amazon Neptune</p>
+  </li>
+  <li>
+    <p>C. Amazon DocumentDB</p>
+  </li>
+  <li>
+    <p>D. Amazon RDS</p>
+  </li>
+</ul>
 
 <blockquote>
   <p>What is the purpose of the code example provided in the lesson?</p>
 </blockquote>
 
-<p>A. To demonstrate how to create a table in Amazon Aurora.</p>
-
-<p>B. To show how to query data from a DynamoDB table.</p>
-
-<p>C. To provide an example of how to connect to a database instance in RDS using Python.</p>
-
-<p>D. To showcase how to insert data into a MySQL table.</p>
+<ul>
+  <li>
+    <p>A. To demonstrate how to create a table in Amazon Aurora.</p>
+  </li>
+  <li>
+    <p>B. To show how to query data from a DynamoDB table.</p>
+  </li>
+  <li>
+    <p><strong>C. To provide an example of how to connect to a database instance in RDS using Python.</strong></p>
+  </li>
+  <li>
+    <p>D. To showcase how to insert data into a MySQL table.</p>
+  </li>
+</ul>
 
   </div><a class="u-url" href="/VSCode-Fastpages-Project/ap%20notes/csp%20assignments/2023/04/27/devopshacks.html" hidden></a>
 </article>
