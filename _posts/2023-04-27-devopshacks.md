@@ -45,12 +45,12 @@ title: Devops Hacks
 > Diagram
 - To Truly understand Nginx and why we are using it, it is important to compare it to other web servers? Compare NGINX with lighttpd in a Venn Diagram, and place the image below:
 
-INSERT IMAGE
+![]({{site.baseurl}}/images/NGINX vs lighttpd.png "Venn diagram")
 
 
 ## Duck DNS HACKS
 > HACK 1 - Create a diagram (canva)
-- image
+- ![]({{site.baseurl}}/images/7.png "14")
 
 > What are the pros and cons of using Duck DNS
 - ans
