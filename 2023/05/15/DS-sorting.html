@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -252,7 +252,7 @@ Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) 
 <p>Explain.</p>
 </blockquote>
 </li>
-<li>Selection sort would be used to sort this list by starting at index 0 and going through the whole list and taking the minimum value and then switching it with index 0. This then happens again with index 1, 2, 3, etc until the list is complete with values low to high. Iterate through the list and replace 0 with 75, then start at index 1 (number 17) and do the same but since 17 is the smallest, nothing changes. Then start at index 2 and iterate through, repeating this process until the list is ordered low to high.</li>
+<li>Bubble:I would sort this list with bubble sort by iterating through the list multiple times. Each time, I would go to the right and look at 2 consecutive elements - for example, 75 and 17. If the one on the right is smaller than the one on the left, I will switch the two, so here, I switch 75 and 17 since 17 is smaller than 75. I keep doing this until the list is sorted.- Selection: This sort would be used to sort this list by starting at index 0 and going through the whole list and taking the minimum value and then switching it with index 0. This then happens again with index 1, 2, 3, etc until the list is complete with values low to high. Iterate through the list and replace 0 with 75, then start at index 1 (number 17) and do the same but since 17 is the smallest, nothing changes. Then start at index 2 and iterate through, repeating this process until the list is ordered low to high.</li>
 </ul>
 <p>[88, 39, 53, 39, 58, 43, 74, 81, 71, 51]</p>
 <p>How would you sort this list with...</p>
@@ -262,7 +262,7 @@ Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) 
 <p>Explain.</p>
 </blockquote>
 </li>
-<li>Merge:- Insertion:</li>
+<li>Merge:I will split the list until only individual elements remain - 88, 39, 53, 39, 58, 43, 74, 81, 71, 51. The elements are sorted and then merged into 1 sorted list.- Insertion:The process will be very similar to Bubble Sort except insertion will only iterate through the list once. It looks at 2 consecutive elements and switches them if the one on the right is smaller - 75 and 17. It also looks at the new consecutive elements after switching so that the whole list is sorted. For example, after switching 75 and 17, 75 is also bigger than 46 so the two are switched.</li>
 </ul>
 
 </div>
@@ -384,8 +384,12 @@ Select the algorithm you believe is best for each, explain.</li>
 <li>
 <p>Run code and then research and answer these questions...</p>
 <ul>
-<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?</li>
-<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.</li>
+<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?<ul>
+<li><strong>Traditionally, a list/dictionary is considered a non-primitive type and therefore, a collection. This is because a collection type is something that stores and organizes multiple values which is what lists and dictionaries do.</strong></li>
+</ul>
+</li>
+<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.<hr>
+</li>
 </ul>
 </li>
 <li>
@@ -482,6 +486,36 @@ city
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>My List:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Dillon"</span><span class="p">,</span> <span class="s2">"percent"</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span> <span class="s2">"letter"</span><span class="p">:</span> <span class="s2">"A"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Steven"</span><span class="p">,</span> <span class="s2">"percent"</span><span class="p">:</span> <span class="mi">83</span><span class="p">,</span> <span class="s2">"letter"</span><span class="p">:</span> <span class="s2">"B"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Noor"</span><span class="p">,</span> <span class="s2">"percent"</span><span class="p">:</span> <span class="mi">77</span><span class="p">,</span> <span class="s2">"letter"</span><span class="p">:</span> <span class="s2">"C"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Lucas"</span><span class="p">,</span> <span class="s2">"percent"</span><span class="p">:</span> <span class="mi">68</span><span class="p">,</span> <span class="s2">"letter"</span><span class="p">:</span> <span class="s2">"D"</span><span class="p">}</span>
+    <span class="p">]</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -595,69 +629,6 @@ letter
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">* Creator: Nighthawk Coding Society</span>
-<span class="sd">Bubble Sort of a List with optimizations</span>
-<span class="sd">"""</span>
-
-<span class="c1"># bubble sorts a list of dictionaries, base off of provided key</span>
-<span class="k">def</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># list are indexed 0 to n-1, len is n</span>
-    
-    <span class="c1"># Traverse through list with i index</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">swapped</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># optimize code, so it exits if now swaps on inner loop</span>
-
-        <span class="c1"># Inner traversal using j index</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">):</span>  <span class="c1"># n-i as positions on right are in order in bubble</span>
- 
-            <span class="c1"># Swap if the element KeyN is greater KeyN1</span>
-            <span class="n">keyN</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-            <span class="n">keyN1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">keyN</span> <span class="o">&gt;</span> <span class="n">keyN1</span><span class="p">:</span>
-                <span class="n">swapped</span> <span class="o">=</span> <span class="kc">True</span>
-                <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>  <span class="c1"># single line swap</span>
-         
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">swapped</span><span class="p">:</span>  <span class="c1"># if no swaps on inner pass, list is sorted</span>
-            <span class="k">return</span>  <span class="c1"># exit function</span>
-    
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-    <span class="c1"># list/dictionary sample</span>
-    <span class="n">list_of_people</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Risa"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"New York"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"Eugene"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Shekar"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"San Francisco"</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"Los Angeles"</span><span class="p">}</span>
-    <span class="p">]</span>
-    
-    <span class="c1"># assuming uniform keys, pick 1st row as source of keys</span>
-    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-    <span class="c1"># print list as defined</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Original"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
-    
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># finds each key in the row</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-        <span class="n">bubbleSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort list of people</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
     
     <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
@@ -685,6 +656,64 @@ letter
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[-202, -97, -9, -2, 0, 11, 45, 88, 747]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span> <span class="c1"># add parameter for what key to sort in dictionary</span>
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="n">min_index</span> <span class="o">=</span> <span class="n">index</span>
+ 
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">[</span><span class="n">min_index</span><span class="p">][</span><span class="n">key</span><span class="p">]:</span>
+                <span class="n">min_index</span> <span class="o">=</span> <span class="n">j</span>
+        <span class="n">array</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">min_index</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Risa"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"New York"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"Eugene"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Shekar"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"San Francisco"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Ryan"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">:</span> <span class="s2">"Los Angeles"</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+<span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"By age:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+
+<span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"By name:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+
+<span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="s2">"city"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"By city:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>By age:[{'name': 'Risa', 'age': 18, 'city': 'New York'}, {'name': 'Shekar', 'age': 18, 'city': 'San Francisco'}, {'name': 'Ryan', 'age': 21, 'city': 'Los Angeles'}, {'name': 'John', 'age': 63, 'city': 'Eugene'}]
+By name:[{'name': 'John', 'age': 63, 'city': 'Eugene'}, {'name': 'Risa', 'age': 18, 'city': 'New York'}, {'name': 'Ryan', 'age': 21, 'city': 'Los Angeles'}, {'name': 'Shekar', 'age': 18, 'city': 'San Francisco'}]
+By city:[{'name': 'John', 'age': 63, 'city': 'Eugene'}, {'name': 'Ryan', 'age': 21, 'city': 'Los Angeles'}, {'name': 'Risa', 'age': 18, 'city': 'New York'}, {'name': 'Shekar', 'age': 18, 'city': 'San Francisco'}]
 </pre>
 </div>
 </div>
