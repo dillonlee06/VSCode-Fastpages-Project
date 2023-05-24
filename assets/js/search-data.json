@@ -896,6 +896,14 @@
   
 
   
+      ,"page13": {
+          "title": "Leaderboard Test",
+          "content": "Show The Different Charging Times for Electric Cars Car 0-100% Charging Times . Let us know if you drive an electric car! . Car: . Time it takes to charge from 0-100%: . Submit .",
+          "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/lbtest",
+          "relUrl": "/lbtest",
+          "date": ""
+      }
+      
   
 
   
@@ -905,7 +913,6 @@
   
 
   
-
   
 
   
@@ -915,10 +922,14 @@
   
 
   
+
   
 
   
-      ,"page22": {
+  
+
+  
+      ,"page23": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/robots.txt",
