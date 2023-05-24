@@ -22,11 +22,9 @@ type: pbl
 
 <style>
   .readtable {
-    background-color: #e0ffe0;
+    background-color: #FFFFFF;
   }
 </style>
-
-<p class="form-tell">Let us know if you drive an electric car!</p>
 
 <div class="form-box">
   <form action="javascript:create_ranking()" class="createForm">
@@ -39,7 +37,6 @@ type: pbl
     <p>
       <label class="form-label">
         Score:
-        <input class="input-boxes" type="text" name="score" id="score" required>
       </label>
     </p>
     <p>
