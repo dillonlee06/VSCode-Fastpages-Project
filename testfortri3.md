@@ -5,14 +5,15 @@ permalink: /lbtest
 type: pbl
 ---
 <div class="secondary">
-  <button id="read_button" type="button" onclick="read_rankings()" class="read-button">Show The Different Charging Times for Electric Cars</button>
+  <button id="read_button" type="button" onclick="read_leaderboard()" class="read-button">Show Leaderboard</button>
 </div>
 
 <table class="readtable">
   <thead>
     <tr>
-      <th>Car</th>
-      <th>0-100% Charging Times</th>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Score</th>
     </tr>
   </thead>
   <tbody id="result">
@@ -31,14 +32,14 @@ type: pbl
   <form action="javascript:create_ranking()" class="createForm">
     <p>
       <label class="form-label">
-        Car:
-        <input class="input-boxes" type="text" name="car" id="car" required>
+        Name:
+        <input class="input-boxes" type="text" name="name" id="name" required>
       </label>
     </p>
     <p>
       <label class="form-label">
-        Time it takes to charge from 0-100%:
-        <input class="input-boxes" type="text" name="chargetime" id="chargetime" required>
+        Score:
+        <input class="input-boxes" type="text" name="score" id="score" required>
       </label>
     </p>
     <p>
@@ -53,7 +54,7 @@ type: pbl
   const apiURL = "http://127.0.0.1:8086/api/rankings/";
 
   // READ
-  function read_rankings() {
+  function read_leaderboard() {
     const read_options = {
       method: 'GET',
       mode: 'cors',
@@ -79,8 +80,8 @@ type: pbl
 
         response.json().then(data => {
           resultContainer.innerHTML = '';
-          data.forEach(row => {
-            add_row(row);
+          data.forEach((row, index) => {
+            add_row(index + 1, row.name, row.score);
           });
         });
       })
@@ -94,16 +95,19 @@ type: pbl
       });
   }
 
-  function add_row(data) {
+  function add_row(rank, name, score) {
     const tr = document.createElement("tr");
-    const car = document.createElement("td");
-    const chargetime = document.createElement("td");
+    const rankCell = document.createElement("td");
+    const nameCell = document.createElement("td");
+    const scoreCell = document.createElement("td");
 
-    car.innerHTML = data.name;
-    chargetime.innerHTML = data.score;
+    rankCell.innerHTML = rank;
+    nameCell.innerHTML = name;
+    scoreCell.innerHTML = score;
 
-    tr.appendChild(car);
-    tr.appendChild(chargetime);
+    tr.appendChild(rankCell);
+    tr.appendChild(nameCell);
+    tr.appendChild(scoreCell);
 
     resultContainer.appendChild(tr);
   }
@@ -111,8 +115,8 @@ type: pbl
   // CREATE
   function create_ranking() {
     const body = {
-      name: document.getElementById("car").value,
-      score: document.getElementById("chargetime").value,
+      name: document.getElementById("name").value,
+      score: document.getElementById("score").value,
     };
 
     const requestOptions = {
@@ -126,4 +130,28 @@ type: pbl
     fetch(apiURL + 'create', requestOptions)
       .then(response => {
         if (response.status !== 200) {
-          const errorMsg
+          const errorMsg = 'API create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        return response.json();
+      })
+      .then(data => {
+        add_row(data.rank, data.name, data.score);
+      })
+      .catch(err => {
+        console.error(err);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = err;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+      });
+  }
+</script>
+
