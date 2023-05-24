@@ -898,7 +898,7 @@
   
       ,"page13": {
           "title": "Leaderboard Test",
-          "content": "Show Leaderboard Rank Name Score . Let us know if you drive an electric car! . Name: . Score: . Submit .",
+          "content": "Show Leaderboard Rank Name Score . Name: . Score: . Submit .",
           "url": "https://dillonlee06.github.io/VSCode-Fastpages-Project/lbtest",
           "relUrl": "/lbtest",
           "date": ""
