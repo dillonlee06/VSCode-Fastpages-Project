@@ -48,7 +48,7 @@ type: pbl
 <script>
   const resultContainer = document.getElementById("result");
   const read_button = document.getElementById("read_button");
-  const apiURL = "http://127.0.0.1:8086/api/rankings/";
+  const apiURL = "https://octolb.duckdns.org/api/leaderboards/";
 
   // READ
   function read_leaderboard() {
