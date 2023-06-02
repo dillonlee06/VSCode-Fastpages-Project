@@ -82,7 +82,7 @@ title: Javascript Exit Ticket
         response.json().then(data => {
           resultContainer.innerHTML = '';
           data.forEach((row, index) => {
-            add_row(index + 1, row.name, row.time);
+            add_row(index + 1, row.name, row.score);
           });
         });
       })
