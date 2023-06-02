@@ -1,3 +1,12 @@
+---
+toc: true
+layout: post
+categories: [AP Notes, CSP Assignments]
+title: Javascript Exit Ticket 
+---
+
+# Javascript Exit Ticket
+
 <script>
 
 export default class LeaderboardScene extends Phaser.Scene {
