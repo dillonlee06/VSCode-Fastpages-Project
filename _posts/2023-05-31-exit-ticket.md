@@ -7,151 +7,118 @@ title: Javascript Exit Ticket
 
 # Javascript Exit Ticket
 
-<div class="secondary">
-  <button id="read_button" type="button" onclick="read_leaderboard()" class="read-button">Show Leaderboard</button>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Leaderboard</title>
+  <style>
+    table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-<table class="readtable">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Score</th>
-    </tr>
-  </thead>
-  <tbody id="result">
-  </tbody>
-</table>
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
 
-<style>
-  .readtable {
-    background-color: #FFFFFF;
-  }
-</style>
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Leaderboard</h2>
+  <p>Sort by:</p>
+  <select id="sort-select">
+    <option value="index">Index</option>
+    <option value="studentNumber">Student Number</option>
+    <option value="studentName">Student Name</option>
+    <option value="studentGPA">Student GPA</option>
+    <option value="studentPercentage">Student Class Percentage</option>
+  </select>
+  <table id="leaderboard">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>Student Number</th>
+        <th>Student Name</th>
+        <th>Student GPA</th>
+        <th>Student Class Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>1001</td>
+        <td>John Doe</td>
+        <td>3.5</td>
+        <td>85%</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1002</td>
+        <td>Jane Smith</td>
+        <td>3.8</td>
+        <td>92%</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>1003</td>
+        <td>Michael Johnson</td>
+        <td>3.2</td>
+        <td>78%</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>1004</td>
+        <td>Sarah Williams</td>
+        <td>3.9</td>
+        <td>95%</td>
+      </tr>
+    </tbody>
+  </table>
 
-<div class="form-box">
-  <form action="javascript:create_ranking()" class="createForm">
-    <p>
-      <label class="form-label">
-        Name:
-        <input class="input-boxes" type="text" name="name" id="name" required>
-      </label>
-    </p>
-    <p>
-      <label class="form-label">
-        Score:
-        <input class="input-boxes" type="text" name="score" id="score" required>
-      </label>
-    </p>
-    <p>
-      <button class="form-button">Submit</button>
-    </p>
-  </form>
-</div>
+  <script>
+    function sortTable() {
+      const select = document.getElementById("sort-select");
+      const value = select.value;
 
-<script>
-  const resultContainer = document.getElementById("result");
-  const read_button = document.getElementById("read_button");
-  const apiURL = "https://octolb.duckdns.org/api/leaderboards/";
+      const table = document.getElementById("leaderboard");
+      const tbody = table.getElementsByTagName("tbody")[0];
+      const rows = tbody.getElementsByTagName("tr");
 
-  // READ
-  function read_leaderboard() {
-    const read_options = {
-      method: 'GET',
-      mode: 'cors',
-      cache: 'default',
-      credentials: 'omit',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    };
-
-    fetch(apiURL, read_options)
-      .then(response => {
-        if (response.status !== 200) {
-          const errorMsg = 'API read error: ' + response.status;
-          console.log(errorMsg);
-          const tr = document.createElement("tr");
-          const td = document.createElement("td");
-          td.innerHTML = errorMsg;
-          tr.appendChild(td);
-          resultContainer.appendChild(tr);
+      let sortFunction;
+      switch (value) {
+        case "index":
+          sortFunction = (a, b) => (a.cells[0].textContent > b.cells[0].textContent) ? 1 : -1;
+          break;
+        case "studentNumber":
+          sortFunction = (a, b) => (a.cells[1].textContent > b.cells[1].textContent) ? 1 : -1;
+          break;
+        case "studentName":
+          sortFunction = (a, b) => (a.cells[2].textContent > b.cells[2].textContent) ? 1 : -1;
+          break;
+        case "studentGPA":
+          sortFunction = (a, b) => (parseFloat(a.cells[3].textContent) > parseFloat(b.cells[3].textContent)) ? 1 : -1;
+          break;
+        case "studentPercentage":
+          sortFunction = (a, b) => (parseFloat(a.cells[4].textContent) > parseFloat(b.cells[4].textContent)) ? 1 : -1;
+          break;
+        default:
           return;
-        }
+      }
 
-        response.json().then(data => {
-          resultContainer.innerHTML = '';
-          data.forEach((row, index) => {
-            add_row(index + 1, row.name, row.score);
-          });
-        });
-      })
-      .catch(err => {
-        console.error(err);
-        const tr = document.createElement("tr");
-        const td = document.createElement("td");
-        td.innerHTML = err;
-        tr.appendChild(td);
-        resultContainer.appendChild(tr);
-      });
-  }
+      const sortedRows = Array.from(rows).sort(sortFunction);
+      for (const row of sortedRows) {
+        tbody.appendChild(row);
+      }
+    }
 
-  function add_row(rank, name, score) {
-    const tr = document.createElement("tr");
-    const rankCell = document.createElement("td");
-    const nameCell = document.createElement("td");
-    const scoreCell = document.createElement("td");
-
-    rankCell.innerHTML = rank;
-    nameCell.innerHTML = name;
-    scoreCell.innerHTML = score;
-
-    tr.appendChild(rankCell);
-    tr.appendChild(nameCell);
-    tr.appendChild(scoreCell);
-
-    resultContainer.appendChild(tr);
-  }
-
-  // CREATE
-  function create_ranking() {
-    const body = {
-      name: document.getElementById("name").value,
-      score: document.getElementById("score").value,
-    };
-
-    const requestOptions = {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: {
-        "Content-Type": "application/json"
-      },
-    };
-
-    fetch(apiURL + 'create', requestOptions)
-      .then(response => {
-        if (response.status !== 200) {
-          const errorMsg = 'API create error: ' + response.status;
-          console.log(errorMsg);
-          const tr = document.createElement("tr");
-          const td = document.createElement("td");
-          td.innerHTML = errorMsg;
-          tr.appendChild(td);
-          resultContainer.appendChild(tr);
-          return;
-        }
-        return response.json();
-      })
-      .then(data => {
-        add_row(data.rank, data.name, data.score);
-      })
-      .catch(err => {
-        console.error(err);
-        const tr = document.createElement("tr");
-        const td = document.createElement("td");
-        td.innerHTML = err;
-        tr.appendChild(td);
-        resultContainer.appendChild(tr);
-      });
-  }
-</script>
+    const select = document.getElementById("sort-select");
+    select.addEventListener("change", sortTable);
+  </script>
+</body>
+</html>
