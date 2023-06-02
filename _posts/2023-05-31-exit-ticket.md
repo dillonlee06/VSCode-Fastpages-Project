@@ -17,16 +17,6 @@ title: Javascript Exit Ticket
       border-collapse: collapse;
       width: 100%;
     }
-
-    th, td {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
   </style>
 </head>
 <body>
@@ -43,7 +33,7 @@ title: Javascript Exit Ticket
     <thead>
       <tr>
         <th>Index</th>
-        <th>Student Number</th>
+        <th>Student ID</th>
         <th>Student Name</th>
         <th>Student GPA</th>
         <th>Student Class Percentage</th>
@@ -52,31 +42,31 @@ title: Javascript Exit Ticket
     <tbody>
       <tr>
         <td>1</td>
-        <td>1001</td>
-        <td>John Doe</td>
+        <td>1924520</td>
+        <td>Dillon Lee</td>
         <td>3.5</td>
         <td>85%</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>1002</td>
-        <td>Jane Smith</td>
+        <td>1820352</td>
+        <td>Steven</td>
         <td>3.8</td>
         <td>92%</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>1003</td>
-        <td>Michael Johnson</td>
+        <td>1923509</td>
+        <td>Noor</td>
         <td>3.2</td>
-        <td>78%</td>
+        <td>98%</td>
       </tr>
       <tr>
         <td>4</td>
-        <td>1004</td>
-        <td>Sarah Williams</td>
+        <td>1812350</td>
+        <td>Lucas</td>
         <td>3.9</td>
-        <td>95%</td>
+        <td>75%</td>
       </tr>
     </tbody>
   </table>
