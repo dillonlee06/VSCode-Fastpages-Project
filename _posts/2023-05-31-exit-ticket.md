@@ -1,62 +1,66 @@
----
-toc: true
-layout: post
-categories: [AP Notes, CSP Assignments]
-title: Javascript Exit Ticket
----
-
-<head>
-    <!-- JQuery -->
-    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <!-- Bootstrap -->
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-    <style>
-        #flaskTable th:first-child {
-            width: 75px;
-        }
-        #flaskTable td:not(:first-child) {
-          width: 150px;
-        }
-    </style>
-
-</head>
-
-<table id="flaskTable" class="table table-striped nowrap" style="width:100%">
-    <thead id="flaskHead">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>DOB</th>
-            <th>Age</th>
-        </tr>
-    </thead>
-    <tbody id="flaskBody"></tbody>
-</table>
-
 <script>
-  $(document).ready(function() {
-    fetch('https://flask.nighthawkcodingsociety.com/api/users/', { mode: 'cors' })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('API response failed');
-      }
-      return response.json();
-    })
-    .then(data => {
-      for (const row of data) {
-        $('#flaskBody').append('<tr><td>' + 
-            row.id + '</td><td>' + 
-            row.name + '</td><td>' + 
-            row.dob + '</td><td>' + 
-            row.age + '</td></tr>');
-      }
-      $("#flaskTable").DataTable();
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  });
+
+export default class LeaderboardScene extends Phaser.Scene {
+    constructor() {
+        super('LeaderboardScene');
+    }
+
+    preload() {
+        
+    }
+
+    create() {
+        
+        
+        const url = 'https://octolb.duckdns.org/api/leaderboards/';
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                // Process the retrieved data
+                let placeStr = "";
+                let nameStr = "";
+                let timeStr = "";
+                let count = 1;
+                console.log(data.length)
+
+                if(data.length < 10){
+                    for(let i = 0; i<data.length; i++){
+                        let point = data[i];
+                        placeStr += count.toString() + "\n";
+                        nameStr += point["name"] + "\n";
+                        timeStr += point['time'] + "\n";
+                        count ++;
+                    }
+                }
+                else {
+                    for(let i = 0; i<10; i++){
+                        let point = data[i];
+                        placeStr += count.toString() + "\n";
+                        nameStr += point["name"] + "\n";
+                        timeStr += point['time'] + "\n";
+                        count ++;
+                    }
+                }
+               
+
+                this.add.text(300, 125, "Place \n" + placeStr, {fontSize: '30px'});
+                this.add.text(450, 125, "Name \n" + nameStr, {fontSize: '30px'});
+                this.add.text(600, 125, "Time \n" + timeStr, {fontSize: '30px'})
+
+               
+            })
+            .catch(error => {
+                // Handle any errors
+                console.error('Error:', error);
+            });
+
+        this.add.text(300, 10, 'Leaderboard', { fontSize: '69px', align:'center', fontFamily:"pressStart" });
+    }
+
+    update() {
+
+    }
+
+}
 </script>
-
-
