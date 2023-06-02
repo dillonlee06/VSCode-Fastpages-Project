@@ -10,52 +10,38 @@ export default class LeaderboardScene extends Phaser.Scene {
     }
 
     create() {
-        
-        
         const url = 'https://octolb.duckdns.org/api/leaderboards/';
 
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 // Process the retrieved data
-                let placeStr = "";
-                let nameStr = "";
-                let timeStr = "";
-                let count = 1;
-                console.log(data.length)
-
-                if(data.length < 10){
-                    for(let i = 0; i<data.length; i++){
-                        let point = data[i];
-                        placeStr += count.toString() + "\n";
-                        nameStr += point["name"] + "\n";
-                        timeStr += point['time'] + "\n";
-                        count ++;
-                    }
+                let tableData = [['Place', 'Name', 'Time']];
+                for (let i = 0; i < Math.min(data.length, 10); i++) {
+                    let point = data[i];
+                    let place = i + 1;
+                    let name = point.name;
+                    let time = point.time;
+                    tableData.push([place, name, time]);
                 }
-                else {
-                    for(let i = 0; i<10; i++){
-                        let point = data[i];
-                        placeStr += count.toString() + "\n";
-                        nameStr += point["name"] + "\n";
-                        timeStr += point['time'] + "\n";
-                        count ++;
-                    }
-                }
-               
 
-                this.add.text(300, 125, "Place \n" + placeStr, {fontSize: '30px'});
-                this.add.text(450, 125, "Name \n" + nameStr, {fontSize: '30px'});
-                this.add.text(600, 125, "Time \n" + timeStr, {fontSize: '30px'})
+                const table = this.add.table(300, 200, tableData, {
+                    fontFamily: 'Arial',
+                    fontSize: '24px',
+                });
+                table.setOrigin(0.5);
 
-               
+                table.add([this.add.text(0, 0, 'Place'), this.add.text(0, 0, 'Name'), this.add.text(0, 0, 'Time')]);
+
+                table.layout();
+
             })
             .catch(error => {
                 // Handle any errors
                 console.error('Error:', error);
             });
 
-        this.add.text(300, 10, 'Leaderboard', { fontSize: '69px', align:'center', fontFamily:"pressStart" });
+        this.add.text(300, 10, 'Leaderboard', { fontSize: '69px', align: 'center', fontFamily: "pressStart" });
     }
 
     update() {
