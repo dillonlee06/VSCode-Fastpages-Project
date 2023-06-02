@@ -119,57 +119,153 @@ window.onload = wrap_img;
 </ul><h1 id="javascript-exit-ticket">
 <a class="anchor" href="#javascript-exit-ticket" aria-hidden="true"><span class="octicon octicon-link"></span></a>Javascript Exit Ticket</h1>
 
+<div class="secondary">
+  <button id="read_button" type="button" onclick="read_leaderboard()" class="read-button">Show Leaderboard</button>
+</div>
+
+<table class="readtable">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody id="result">
+  </tbody>
+</table>
+
+<style>
+  .readtable {
+    background-color: #FFFFFF;
+  }
+</style>
+
+<div class="form-box">
+  <form action="javascript:create_ranking()" class="createForm">
+    <p>
+      <label class="form-label">
+        Name:
+        <input class="input-boxes" type="text" name="name" id="name" required="">
+      </label>
+    </p>
+    <p>
+      <label class="form-label">
+        Score:
+        <input class="input-boxes" type="text" name="score" id="score" required="">
+      </label>
+    </p>
+    <p>
+      <button class="form-button">Submit</button>
+    </p>
+  </form>
+</div>
+
 <script>
+  const resultContainer = document.getElementById("result");
+  const read_button = document.getElementById("read_button");
+  const apiURL = "https://octolb.duckdns.org/api/leaderboards/";
 
-export default class LeaderboardScene extends Phaser.Scene {
-    constructor() {
-        super('LeaderboardScene');
-    }
+  // READ
+  function read_leaderboard() {
+    const read_options = {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'default',
+      credentials: 'omit',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    };
 
-    preload() {
-        
-    }
+    fetch(apiURL, read_options)
+      .then(response => {
+        if (response.status !== 200) {
+          const errorMsg = 'API read error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
 
-    create() {
-        const url = 'https://octolb.duckdns.org/api/leaderboards/';
+        response.json().then(data => {
+          resultContainer.innerHTML = '';
+          data.forEach((row, index) => {
+            add_row(index + 1, row.name, row.time);
+          });
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = err;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+      });
+  }
 
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                // Process the retrieved data
-                let tableData = [['Place', 'Name', 'Time']];
-                for (let i = 0; i < Math.min(data.length, 10); i++) {
-                    let point = data[i];
-                    let place = i + 1;
-                    let name = point.name;
-                    let time = point.time;
-                    tableData.push([place, name, time]);
-                }
+  function add_row(rank, name, score) {
+    const tr = document.createElement("tr");
+    const rankCell = document.createElement("td");
+    const nameCell = document.createElement("td");
+    const scoreCell = document.createElement("td");
 
-                const table = this.add.table(300, 200, tableData, {
-                    fontFamily: 'Arial',
-                    fontSize: '24px',
-                });
-                table.setOrigin(0.5);
+    rankCell.innerHTML = rank;
+    nameCell.innerHTML = name;
+    scoreCell.innerHTML = score;
 
-                table.add([this.add.text(0, 0, 'Place'), this.add.text(0, 0, 'Name'), this.add.text(0, 0, 'Time')]);
+    tr.appendChild(rankCell);
+    tr.appendChild(nameCell);
+    tr.appendChild(scoreCell);
 
-                table.layout();
+    resultContainer.appendChild(tr);
+  }
 
-            })
-            .catch(error => {
-                // Handle any errors
-                console.error('Error:', error);
-            });
+  // CREATE
+  function create_ranking() {
+    const body = {
+      name: document.getElementById("name").value,
+      score: document.getElementById("score").value,
+    };
 
-        this.add.text(300, 10, 'Leaderboard', { fontSize: '69px', align: 'center', fontFamily: "pressStart" });
-    }
+    const requestOptions = {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: {
+        "Content-Type": "application/json"
+      },
+    };
 
-    update() {
-
-    }
-
-}
+    fetch(apiURL + 'create', requestOptions)
+      .then(response => {
+        if (response.status !== 200) {
+          const errorMsg = 'API create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        return response.json();
+      })
+      .then(data => {
+        add_row(data.rank, data.name, data.score);
+      })
+      .catch(err => {
+        console.error(err);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = err;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+      });
+  }
 </script>
 
 
