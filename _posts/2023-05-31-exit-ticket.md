@@ -7,7 +7,6 @@ title: Javascript Exit Ticket
 
 # Javascript Exit Ticket
 
-<!DOCTYPE html>
 <html>
 <head>
   <title>Student Leaderboard</title>
