@@ -1,5 +1,5 @@
 ---
-title: My JavaScript Table
+title: test
 comments: true
 layout: base
 description: Try simple table with JQuery Sort
