@@ -115,7 +115,7 @@ window.onload = wrap_img;
             margin: 120px;
             margin-bottom: 10px;
             margin-top: 10px;
-            background-color: white; /* Set background color to white */
+            background-color: white; 
         }
         .cell {
             font-family: "Poppins", sans-serif;
@@ -126,7 +126,7 @@ window.onload = wrap_img;
             cursor: pointer;
             line-height: 50px;
             font-size: 20px;
-            color: black; /* Set text color to black */
+            color: black; 
         }
         button {
             margin-bottom: 20px;
@@ -165,125 +165,89 @@ window.onload = wrap_img;
 </html>
 
 <script>
-// Select the element with class 'game--status' and store it in the statusDisplay variable
-const statusDisplay = document.querySelector('.game--status');
-
-// Initialize gameActive as true
-let gameActive = true;
-
-// Initialize currentPlayer as 'X'
-let currentPlayer = "X";
-
-// Create an array to represent the game state
-let gameState = ["", "", "", "", "", "", "", "", ""];
-
-// Function that returns a winning message with the current player's symbol
-const winningMessage = () => `Player ${currentPlayer} has won!`;
-
-// Function that returns a draw message
-const drawMessage = () => `Game ended in a draw!`;
-
-// Function that returns a message indicating the current player's turn
-const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
-
-// Set the initial text of the status display element to indicate the current player's turn
-statusDisplay.innerHTML = currentPlayerTurn();
-
-// Add click event listeners to all elements with class 'cell'
-document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
-
-// Add a click event listener to the element with class 'game--restart'
-document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
-
-// Function to handle the click event on a cell
-function handleCellClick(clickedCellEvent) {
-    // Get the clicked cell and its index
-    const clickedCell = clickedCellEvent.target;
-    const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
-
-    // Check if the cell is already occupied or the game is not active
-    if (gameState[clickedCellIndex] !== "" || !gameActive) {
-        return;
-    }
-
-    // Mark the clicked cell with the current player's symbol
-    handleCellPlayed(clickedCell, clickedCellIndex);
-    // Check if the game has been won or ended in a draw
-    handleResultValidation();
-}
-
-// Function to mark a cell with the current player's symbol
-function handleCellPlayed(clickedCell, clickedCellIndex) {
-    gameState[clickedCellIndex] = currentPlayer;
-    clickedCell.innerHTML = currentPlayer;
-}
-
-// Array of winning conditions (combinations of cells that lead to a win)
-const winningConditions = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-];
-
-// Function to validate the game result after each move
-function handleResultValidation() {
-    let roundWon = false;
-    // Iterate through all the winning conditions
-    for (let i = 0; i <= 7; i++) {
-        const winCondition = winningConditions[i];
-        let a = gameState[winCondition[0]];
-        let b = gameState[winCondition[1]];
-        let c = gameState[winCondition[2]];
-        // Check if any winning condition has been met
-        if (a === '' || b === '' || c === '') {
-            continue;
-        }
-        if (a === b && b === c) {
-            roundWon = true;
-            break;
-        }
-    }
-
-    // If a round has been won, update the status display and set gameActive to false
-    if (roundWon) {
-        statusDisplay.innerHTML = winningMessage();
-        gameActive = false;
-        return;
-    }
-
-    // If the game has ended in a draw, update the status display and set gameActive to false
-    let roundDraw = !gameState.includes("");
-    if (roundDraw) {
-        statusDisplay.innerHTML = drawMessage();
-        gameActive = false;
-        return;
-    }
-
-    // If the game is still active, switch the current player and update the status display
-    handlePlayerChange();
-}
-
-// Function to switch the current player and update the status display
-function handlePlayerChange() {
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    const statusDisplay = document.querySelector('.game--status'); //variable for if its someones turn or if someone won
+    let gameActive = true; //game is active, becomes false when someone wins
+    let currentPlayer = "X"; //changes to "O" after going (in line 156)
+    let gameState = ["", "", "", "", "", "", "", "", ""];
+    const winningMessage = () => `Player ${currentPlayer} has won!`;
+    const drawMessage = () => `Game ended in a draw!`;
+    const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
     statusDisplay.innerHTML = currentPlayerTurn();
-}
+    document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick)); //allows clicking grid cells
+    document.querySelector('.game--restart').addEventListener('click', handleRestartGame); 
 
-// Function to handle the restart game event
-function handleRestartGame() {
-    // Reset game state and player to their initial values
-    gameActive = true;
-    currentPlayer = "X";
-    gameState = ["", "", "", "", "", "", "", "", ""];
-    // Update the status display and clear the cell contents
-    statusDisplay.innerHTML = currentPlayerTurn();
-    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
-}
+    function handleCellClick(clickedCellEvent) { //
+        const clickedCell = clickedCellEvent.target;
+        const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
+        if (gameState[clickedCellIndex] !== "" || !gameActive) {
+            return;
+        }
+        handleCellPlayed(clickedCell, clickedCellIndex);
+        handleResultValidation();
+    }
+
+    function handleCellPlayed(clickedCell, clickedCellIndex) {//cell index is set to the current player and blank space is replaced
+        gameState[clickedCellIndex] = currentPlayer;
+        clickedCell.innerHTML = currentPlayer;
+    }
+
+    const winningConditions = [ //win conditions of 3 in a row
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
+    function handleResultValidation() { //checking win conditions
+        let roundWon = false;
+        for (let i = 0; i <= 7; i++) { //iterate through winning conditions above
+            const winCondition = winningConditions[i]; //whether an X or an O is in an index and lines up with the winning line
+            let a = gameState[winCondition[0]];
+            let b = gameState[winCondition[1]];
+            let c = gameState[winCondition[2]];
+            if (a === '' || b === '' || c === '') { //if empty, win condition not fullfilled
+                continue;
+            }
+            if (a === b && b === c) {
+                roundWon = true;
+                break;
+            }
+        }
+
+        if (roundWon) { //if win conditions met
+            statusDisplay.innerHTML = winningMessage();
+            gameActive = false;
+            return;
+        }
+
+        let roundDraw = !gameState.includes("");
+
+        if (roundDraw) { //no win conditions met
+            statusDisplay.innerHTML = drawMessage();
+            gameActive = false;
+            return;
+        }
+
+        handlePlayerChange();
+    }
+
+
+    function handlePlayerChange() { //switches player X and O
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+        statusDisplay.innerHTML = currentPlayerTurn();
+    }
+
+    function handleRestartGame() { //resets all cells to empty and current player back to X
+        gameActive = true;
+        currentPlayer = "X";
+        gameState = ["", "", "", "", "", "", "", "", ""];
+        statusDisplay.innerHTML = currentPlayerTurn();
+        document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
+    }
 </script>
 </html>
 
